@@ -4,9 +4,11 @@ hide:
   - toc
 ---
 
-# **Rassembler et diffusez toutes vos documentations.**
+# **Bienvenue sur la documentation des réalisations de PicoJoule**
 
-(Description à renseigner ici)
+PicoJoule est une association de loi 1901 qui fait la promotion des **énergies renouvelables** avec de **petites installations de méthanisation**.
+
+Par cette documentation, informez-vous et/ou participez à sa rédaction. Le but étant de promouvoir une ingénierie libre et populaire.
 
 ---
 

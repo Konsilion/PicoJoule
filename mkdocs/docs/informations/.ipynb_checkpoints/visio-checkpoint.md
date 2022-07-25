@@ -3,10 +3,13 @@ hide:
   - toc
 ---
 
-# Visioconférence
+# Visioconférences publiques
 
-[Lien vers la visio du projet](https://meet.jit.si/<votre_nom_de_salon>)
+Choisissez votre salon de discussion :
 
+* [Salle n°1](https://meet.jit.si/picojoule-salon1)
+* [Salle n°2](https://meet.jit.si/picojoule-salon2)
+* [Salle n°3](https://meet.jit.si/picojoule-salon3)
 
 ---
 

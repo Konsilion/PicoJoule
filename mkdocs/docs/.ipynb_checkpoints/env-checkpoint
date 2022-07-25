@@ -1,7 +1,7 @@
 # SITE INFORMATIONS
 
-site_name: Nom de votre site
-site_author: Auteur
+site_name: Méthaniseur domestique - Documentation et réalisations
+site_author: Nicolas Brémond
 site_description: >-
   (Description du site)
 
@@ -17,14 +17,31 @@ theme:
 
 # REPERTOIRE GIT DE VOTRE PROJET (GitHUB uniquement pour le moment)
 
-repo_url: https://github.com/<usr_name>/<repo_name>
-repo_name: <repo_name>/
+repo_url: https://github.com/konsilion/picojoule
+repo_name: picojoule/
 edit_uri: blob/master/mkdocs/docs
 
 # TOUTE VOTRE DOCUMENTATION
 
 nav:
   - Accueil: index.md
+  - Techniques : 
+      - Introduction: techniques/introduction.md
+      - Production de gaz: techniques/production.md
+      - Traitements & stockage:
+          - techniques/traitements.md
+          - Compression: techniques/compression.md
+      - Utilisation: techniques/utilisation.md
+      - Retour au sol: techniques/epandage.md
+  - Prototypes : 
+      - Introduction: prototypes/introduction.md
+      - Liste des prototypes: prototypes/liste_proto.md
+  - Analyses :
+      - Introduction: analyses/introduction.md
+      - Analyses de Cycle de Vie: analyses/acv.md
+      - Technico-économique: analyses/tech_eco.md
+      - Acceptation sociale: analyses/acceptation_sociale.md
+      - Réglementaire: analyses/reglementation.md
   - Communauté:
       - Documentation collaborative ?: informations/premiers_pas.md
       - informations/pad.md
@@ -33,7 +50,6 @@ nav:
       - Contacts: 
           - informations/contacts.md
       
-
 # MENTIONS LEGALES
 
 copyright: Proposé par Konsilion ingénieries basé sur MkDocs - Ce document est régi par les termes de la licence juridique Creative Commons CC-BY-SA 4.0
