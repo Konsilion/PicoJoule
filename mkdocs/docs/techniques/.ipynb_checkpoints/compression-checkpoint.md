@@ -1,6 +1,6 @@
 # Compresser le biogaz
 
-*Tutoriel de fabircation d'un système de compression de biogaz domestique*
+*Tutoriel de fabrication d'un système de compression de biogaz domestique*
 
 ---
 
@@ -21,13 +21,15 @@ Présenté ici tous le matériels nécessaire à la réalisation d’un système
 
 ### Liste du nécessaire
 
-Matériel:
+*Matériel:*
+
 * Compresseur de frigo
 * raccords cuivre – écrou laiton 1/2 pouce
 * Té laiton 1/2 pouces
 * Manomètre 0 -10 bars
 
-Outils 
+*Outils :*
+
 * Scie à métaux
 * étau 
 * téflon
@@ -41,7 +43,7 @@ Le compresseur est composé d’un piston entraîné par un moteur électrique q
 Pour la partie électrique, le compresseur est alimenté en 220V monophasé et il est commandé par un thermostat. Parmi les câbles qui partent vers le thermostat, il y a aussi les câbles d’alimentation de l’éclairage de réfrigérateur. 
 Remarque : Normalement si vous branchez le compresseur dans l’état présenté ci-dessus, il ne devrait pas démarrer car le thermostat joue le rôle d’interrupteur et ainsi présenté, il est ouvert. Il faudra le court-circuiter et le remplacer par un vrai interrupteur.
 
-**Astuce** : le diamètre du conduit de sortie est plus petit que celui d’entrée.
+**Point d'attention** : le diamètre du conduit de sortie est plus petit que celui d’entrée.
 
 
 ## **Fabrication du compresseur Biogaz**
@@ -70,36 +72,38 @@ Sur le schéma ci-dessus, on peut voire les 2 brasures nécessaires pour joindre
 
 La dernière partie du compresseur est constituée de l’adaptateur qui permet de s’adapter aux différentes bouteilles. En effet, il existe différentes bouteilles de gaz que vous pouvez récupérer :
 
-* Bouteilles métalliques : Raccord à viser, pas à gauche (pression max 10 ou 30 bars selon la marque)
-* Bouteilles en fibres de verre : Raccord à clipser (pression max 30 bars) Attention, il existe 2 tailles
+* *Bouteilles métalliques* : Raccord à viser, pas à gauche (pression max 10 ou 30 bars selon la marque)
+* *Bouteilles en fibres de verre* : Raccord à clipser (pression max 30 bars) Attention, il existe 2 tailles
 
-* Les bouteilles métalliques
+
+**Les bouteilles métalliques**
 Les bouteilles métalliques possèdent une entrée/sortie avec un filetage à gauche diamètre 1/2 pouces. Il est donc compliqué de trouver de raccord directement en 1/2 pouces pas à gauche. Il faut donc ruser. Voici quelques pistes :
 
-* Utiliser un détendeur modifié : 
-L’utilisation d’un détendeur classique pour connecteur les bouteilles n’est pas possible car ils possèdent une fonction anti-retour. Cette fonction assure la sécurité des bouteille en fonctionnement pour empêcher l’air de rentrer dans les bouteilles et de créer une atmosphère explosive (ATEX). Pour notre utilisation, il faut donc supprimer ce clapet anti-retour.
+* Utiliser un détendeur modifié 
+L’utilisation d’un détendeur classique pour connecteur les bouteilles n’est pas possible car ils possèdent une fonction anti-retour. 
+Cette fonction assure la sécurité des bouteille en fonctionnement pour empêcher l’air de rentrer dans les bouteilles et de créer une atmosphère explosive (ATEX). Pour notre utilisation, il faut donc supprimer ce clapet anti-retour.
 En effet, le détendeur nous sert ici seulement de raccord pour nous adapter à la connectique spéciale des bouteilles de gaz.
 L’astuce que nous pratiquons actuellement est de « sacrifier » un détendeur pour le remplissage. L’objectif est de venir briser la tige support du clapet de détente (cf. Schéma ci-dessus). Cette manipulation permet de supprimer le clapet de détente et donc la fonction « clapet anti-retour » du détendeur ainsi que sa fonction de détendeur (malheureusement). Ainsi modifié, le « nouveau détendeur » nous fait office d’adaptateur pour remplir les bouteilles
 
-* Réaliser un adaptateur
-
-Nous avons testé 2 techniques, l’adaptateur n°1 F-F et l’adaptateur n°2 M-F
-
+* Réaliser un adaptateur : Nous avons testé 2 techniques, l’adaptateur n°1 F-F et l’adaptateur n°2 M-F
 L’idée est de récupérer les écrous « pas à gauche » sur de 
 vieux détendeurs en les découpant et de fabriquer des adaptations soit avec des raccords droit laiton-cuivre (qui ont des écrous libres) soit avec des raccords laiton MM
 Dans le cas n°2, il faut garder le bout de tuyau découpé du détendeur pour le braser avec le raccord MM 1/2 pouce.
-
 Vous trouverez sur le marché des lyres de raccordement pour 10 à 20€ qui font très bien l’affaire. Cependant, il est très difficile d’en trouver en récupération (image ci-contre)
 
 
-* Les bouteilles en fibre de verre
-
-Pour les détendeurs à clipser (image ci-contre), nous n’avons pas encore trouvé d’adaptateur fait maison pour remplir les bouteilles. Nous opérons donc comme vu précédemment pour modifier les détendeurs et les convertir en raccords.
+**Les bouteilles en fibre de verre** : Pour les détendeurs à clipser (image ci-contre), nous n’avons pas encore trouvé d’adaptateur fait maison pour remplir les bouteilles. Nous opérons donc comme vu précédemment pour modifier les détendeurs et les convertir en raccords.
 Ainsi modifié, le « nouveau détendeur » nous fait office d’adaptateur pour remplir les bouteilles de gaz en fibre de verre (beaucoup plus légères)
 
 
 
 ## **Pistes d’améliorations**
+
+|![](https://static.wixstatic.com/media/9c0294_10806d3e86b04622b058669f09f2be9c~mv2.png/v1/fill/w_836,h_227,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/banni%C3%A8reinternet_edited.png "Titre de l'image")|
+|:--:|
+| <b>Fig - Titre</b> |
+
+
 
 Avoir un chargeur d’huile en entrée pour rajouter de l’huile facilement
 

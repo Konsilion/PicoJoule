@@ -29,8 +29,9 @@ nav:
       - Introduction: techniques/introduction.md
       - Production de gaz: techniques/production.md
       - Traitements & stockage:
-          - techniques/traitements.md
+          - Epuration: techniques/epuration.md
           - Compression: techniques/compression.md
+          - Stockages: techniques/stockages.md
       - Utilisation: techniques/utilisation.md
       - Retour au sol: techniques/epandage.md
   - Prototypes : 

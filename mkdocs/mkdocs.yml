@@ -16,6 +16,9 @@ theme:
 
 markdown_extensions:
   - footnotes
+  - toc:
+      toc_depth: "2-5"
+      
 
 plugins:
   - macros
