@@ -18,10 +18,20 @@ markdown_extensions:
   - footnotes
   - toc:
       toc_depth: "2-5"
-      
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences      
 
 plugins:
+  - table-reader
   - macros
   - search
   - mike
+  
+extra_css:
+  - //cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css
+
+extra_javascript:
+  - //cdn.datatables.net/1.12.1/js/jquery.dataTables.min.js
+
     

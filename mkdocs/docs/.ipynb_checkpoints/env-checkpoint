@@ -45,8 +45,7 @@ nav:
       - Réglementaire: analyses/reglementation.md
   - Communauté:
       - Documentation collaborative ?: informations/premiers_pas.md
-      - informations/pad.md
-      - informations/chat.md
+      - Tablecsv: tablecsv/table2.md
       - informations/visio.md
       - Contacts: 
           - informations/contacts.md
