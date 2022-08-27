@@ -1,8 +1,8 @@
 window.onload = function() {
     
-    Papa.parse("../Health Clinics in Chicago.csv", { 
+    Papa.parse("https://support.staffbase.com/hc/en-us/article_attachments/360009197031/username.csv", { 
         download: true,
-        delimiter: ",",
+        delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
             htmlTableGenerator(results.data);
