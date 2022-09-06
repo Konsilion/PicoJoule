@@ -1,5 +1,7 @@
 ---
 hide:
+    - toc
+    - navigation
 ---
 
 # TITRE DE LA PAGE

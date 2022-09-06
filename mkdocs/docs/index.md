@@ -22,9 +22,3 @@ Par cette documentation, informez-vous et/ou participez à sa rédaction. Le but
 
 <br><br>
 
-<style>
-  body {text-align: justify}
-  .md-content__button {
-    display: none;
-  }
-</style>
