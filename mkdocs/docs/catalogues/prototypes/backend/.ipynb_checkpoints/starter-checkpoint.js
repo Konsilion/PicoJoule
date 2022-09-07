@@ -13,7 +13,7 @@ for (var i = 0; i < btns.length; i++) {
 
 
 // Add or remove active class to the current button
-var btnContainer = document.getElementById("colorNav");
+var btnContainer = document.getElementById("grid-s-filter");
 var btns = btnContainer.getElementsByClassName("btn-family");
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function(){  
@@ -25,6 +25,14 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
-all_grid();
+
+setTimeout(function(){
+    all_grid();
+    var loader = document.getElementById("container-loader");
+    var content = document.getElementById("content");
+    w3AddClass(loader, "hide")
+    w3RemoveClass(content, "hide")
+}, 1500);
+
 
 

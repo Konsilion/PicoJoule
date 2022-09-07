@@ -3,19 +3,19 @@ hide:
     - toc
 ---
 
-# TITRE DE LA PAGE
+# TITRE DE VOTRE PAGE
 
 
 <!--- 1. Modifier la source (src) afin qu'elle indique le lien de votre catalogue-->
 
-<iframe class="iframe-forge" src="/catalogues/prototypes/catalogue" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
+<iframe class="iframe-forge" src="https://<github-username>.github.io/<nom_repertoire>/latest/catalogues/exemple/catalogue" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
 
 
 
 <!--- 2. Modifier le lien ci-dessous afin qu'il indique la page de retour de votre catalogue.-->
 <script>
 function CatalogBack() {
-        window.location.href = "https://exemple.fr";
+        window.location.href = "https://github-username.github.io/nom_repertoire/latest/VOTRE_PAGE_VOISINE";
     }
 </script>
 

@@ -20,11 +20,6 @@ hide:
     </div>
 </html>
 
-
-
-
-
-
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -43,13 +38,12 @@ hide:
     <link rel="stylesheet" href="../backend/extra.css">
 </head>
     <body><div id="content" class="hide">
-        <div id="btn-zone"></div>
+        <div id="btn-zone"></div><hr>
         <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
             <div id="grid-filter"></div>
             <hr><div id="grid-s-filter"></div>
         </div><br>
-        <input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Recherche ..." title="Type in a name">
-        <div style="text-align:right;justify-content: right;" id="filters-list"></div>
+        <div style="text-align:center;justify-content: center;" id="filters-list"></div>
         <div id="grid-preview"></div>
         <br><br><div id="add-project" ></div>
         <div id="param-zone"></div>

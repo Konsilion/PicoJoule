@@ -2,6 +2,10 @@
 
 var filters = [];
 var toggle = 0;
+const fromDb = undefined;
+//var arr_filters = [[]];
+let arr_filters;
+
 
 // Transformations CSV vers HTML
 window.onload = function() {
@@ -9,9 +13,10 @@ window.onload = function() {
     // -----> Filtres principaux
     Papa.parse("../data/filtres.csv", { 
         download: true,
-        delimiter: ",",
+        delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
+            arr_filters = results.data;
             htmlFilterGenerator(results.data);
         }
     });    
@@ -19,9 +24,10 @@ window.onload = function() {
     // -----> Filtres secondaire
     Papa.parse("../data/s_filtres.csv", { 
         download: true,
-        delimiter: ",",
+        delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
+            arr_filters = arr_filters.concat(results.data);
             html_s_FilterGenerator(results.data);
         }
     }); 
@@ -29,7 +35,7 @@ window.onload = function() {
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse("../data/data.csv", { 
         download: true,
-        delimiter: ",",
+        delimiter: ";",
         skipEmptyLines: true,
         complete: results => {
             htmlTableGenerator(results.data);
@@ -75,7 +81,7 @@ function htmlFilterGenerator(content) {
     const data = content.slice(1);
     
     data.forEach(function(row, index) {    
-        html += '<button class="btn neumorphic-btn" onclick="modifFilters(this,' + data[index][0] + ')"> ' + data[index][1] + '</button>';
+        html += '<button class="neumorphic-btn" onclick="modifFilters(this,\'' + data[index][0] + '\')"> ' + data[index][1] + '</button>';
     });
 
     grid_filter.innerHTML = html;
@@ -86,7 +92,7 @@ function htmlFilterGenerator(content) {
 // -----> Créée le filtres secondaires
 function html_s_FilterGenerator(content) {
 
-    let grid_s_filter = document.getElementById('colorNav');
+    let grid_s_filter = document.getElementById('grid-s-filter');
 
     let html = '<ul>';
     
@@ -94,7 +100,7 @@ function html_s_FilterGenerator(content) {
     
     data.forEach(function(row, index) {    
         html += '<li>';
-        html += '<button descr="' + data[index][1] + '" class="neumorphic-btn ' + data[index][2] + ' tooltip" onclick="modifFilters(this,' + data[index][0] + ')"></button>';
+        html += '<button descr="' + data[index][1] + '" class="neumorphic-btn ' + data[index][2] + ' tooltip" onclick="modifFilters(this,\'' + data[index][0] + '\')"></button>';
         html += '</li>';
     });
     
@@ -118,8 +124,8 @@ function htmlTableGenerator(content) {
             html += '<div class="container filterDiv ' + data[index][3] + '">';
                html += '<a href="' + data[index][2] + '" target="_blank">'; 
                     html += '<div class="column_catalog">';
-                        if(typeof data[index][4]=="string"){html += '<div class="img_grid"><img class="img_toto" src="' + data[index][4] + '"></div>';} else {html += '<div class="img_grid"><img class="img_toto" src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg"></div>';}
-                        html += '<div class="product tumbnail">';
+                        if(data[index][4] !== ""){html += '<div class="img_grid"><img class="img_card" src="' + data[index][4] + '"></div>';} else {html += '<div class="img_grid"><img class="img_card" src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg"></div>';}
+                        html += '<div class="card-title">';
                             html += '<p>' + data[index][0] + '</p>';
                         html += '</div>';
                     html += '</div>';
@@ -144,7 +150,6 @@ function htmlParamGenerator(content) {
     
     let html = '<details id="param-detail" class="note"><summary>Paramètre avancé de recherche</summary>';    
     
-
     // -----> Ajouter ce catalogue à votre site internet - lien iframe
     
     let ifram_code = '<code><</code><code>iframe src="' + data[1][1] +'" width="100%" height="900" frameborder="0" loading="lazy"><</code><code>/iframe></code>';
@@ -181,7 +186,7 @@ function htmlParamGenerator(content) {
     
     let add_project = document.getElementById('add-project'); 
     
-    html = '<a href="' + data[0][1] + '" target="_blank"><button class="btn neumorphic-btn" style="width:100%;"><i class="fa-solid fa-pen"></i> Ajouter votre projet</button></a><br><br>';
+    html = '<a href="' + data[0][1] + '" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-pen"></i> Ajouter votre projet</button></a><br><br>';
 
     add_project.innerHTML = html;    
     
@@ -192,7 +197,17 @@ function htmlParamGenerator(content) {
     
     html = data[2][1];
 
-    copyright_zone.innerHTML = html;  
+    copyright_zone.innerHTML = html;
+    
+    
+    
+    // -----> Ajouter les boutons de navigation
+    
+    let btn_zone = document.getElementById('btn-zone'); 
+
+    html = '<button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button><button class="btn neumorphic-btn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-magnifying-glass"></i>  Les filtres</button><button class="btn neumorphic-btn btn-reset" onclick="all_grid()">Réinitialiser</button>';
+
+    btn_zone.innerHTML = html;
 }
 
 
@@ -234,6 +249,34 @@ function all_grid() {
   }
 }
 
+
+
+
+function reset_grid() {
+
+    x = document.getElementsByClassName("filterDiv");
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");  
+    }
+
+    // Add or remove active class to the current button
+    var btnContainer = document.getElementById("grid-s-filter");
+    var btns = btnContainer.getElementsByClassName("neumorphic-btn");
+    for (var i = 0; i < btns.length; i++) {   
+        btns[i].className = btns[i].className.replace(" active", "");
+    }
+    
+    // Add or remove active class to the current button
+    var btnContainer = document.getElementById("grid-filter");
+    var btns = btnContainer.getElementsByClassName("neumorphic-btn");
+    for (var i = 0; i < btns.length; i++) {   
+        btns[i].className = btns[i].className.replace(" active", "");
+    }
+    
+    filters=[];
+    
+    listFilters();
+}
 
 
 // -----> Compare la liste des filtres en cours filters [] avec les classe des gridcards
@@ -306,29 +349,85 @@ function w3RemoveClass(element, name) {
 
 
 
-// -----> Je ne sais pas
+// -----> Montre les filtre actif par l'ajout de la classe "active"
 function modifFilters(element,c) {
-// Ajouter ou supprimer filtre(s)   
+    // Ajouter ou supprimer filtre(s)   
     if(element.classList.contains("active")){
-        // Désactiver le bouton et son filtre 
+        // Désactiver le bouton et son filtre
         for( var i = 0; i < filters.length; i++){ 
             if ( filters[i] === c) { 
                 filters.splice(i, 1); 
                 i--; 
             }
         }
-        w3RemoveClass(element,"active")
+        w3RemoveClass(element," active");
     } else {
         //Ajout de la valeur filtre à filters variable 
-        w3AddClass(element,"active")
+        w3AddClass(element,"active");
         filters.push(c);
     }
-    filterShow(filters)
+    filterShow(filters);
+    listFilters();
+}
+
+
+
+// -----> Affiche les filtres courant pour une meilleur visualisation
+function listFilters(){
+    
+    let html = '';
+    
+    let filters_list = document.getElementById('filters-list');
+    
+    for (var i = 0, len = filters.length; i < len; i++){   
+        html += '<button class="neumorphic-tag">' + VlookUp(arr_filters, filters[i]) + '</button>';
+    };
+    
+    filters_list.innerHTML = html;
+}
+
+
+
+// -----> Recherche vertical array
+function VlookUp(arr, value){
+    for (var i = 0, len = arr.length; i < len; i++){ 
+        if (arr[i][0] == value) return arr[i][1];
+    };
 }
 
 
 
 
+
+// -----> Recherche par nom de projet - (pas trop maitrisé mais fonctionne)
+function SearchBar() {
+    var input, filter, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    li = document.getElementsByClassName("filterDiv");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+
+
+
+
+
+// -----> Appel la fonction dans la page parente
+function BackBtn(){
+   parent.CatalogBack();
+}
+
+
+
+// ============== Fonction en essai =================
 
 
 
@@ -343,29 +442,7 @@ function modifFilters(element,c) {
 // ============== Fonction non utilisée depuis 06-09-2022 =================
 
 
-function reset_grid() {
 
-    x = document.getElementsByClassName("filterDiv");
-    for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");  
-    }
-
-    // Add or remove active class to the current button
-    var btnContainer = document.getElementById("colorNav");
-    var btns = btnContainer.getElementsByClassName("btn-family");
-    for (var i = 0; i < btns.length; i++) {   
-        btns[i].className = btns[i].className.replace(" active", "");
-    }
-    
-    // Add or remove active class to the current button
-    var btnContainer = document.getElementById("grid-filter");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {   
-        btns[i].className = btns[i].className.replace(" active", "");
-    }
-    
-    filters=[];
-}
 
 
 // ----> Non utilisée - pour le moment, elle permettrait la gestion du Ou/Et lors de la recherche

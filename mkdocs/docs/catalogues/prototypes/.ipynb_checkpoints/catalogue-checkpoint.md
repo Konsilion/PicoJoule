@@ -1,8 +1,29 @@
 ---
 hide:
-    -toc
-    -navigation
---- 
+    - toc
+    - navigation
+---
+
+
+
+
+<!-- NE PAS MODIFIER CETTE PAGE -->
+
+
+
+
+
+<html lang="fr">
+    <div id="container-loader">
+        <div id="loader"></div>
+        <h4>Chargement</h4>
+    </div>
+</html>
+
+
+
+
+
 
 <html lang="fr">
 <head>
@@ -21,15 +42,66 @@ hide:
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../backend/extra.css">
 </head>
-    <body>
-        <button class="btn neumorphic-btn" onclick="HideShowFilters('filters-zone');"><i class="fa-solid fa-magnifying-glass"></i>  Les filtres</button><button class="btn neumorphic-btn btn-reset" onclick="all_grid()">Réinitialiser</button><br>
+    <body><div id="content" class="hide">
+        <div id="btn-zone"></div>
         <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
             <div id="grid-filter"></div>
-            <hr><div id="colorNav"></div>
+            <hr><div id="grid-s-filter"></div>
         </div><br>
+        <input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Recherche ..." title="Type in a name">
+        <div style="text-align:right;justify-content: right;" id="filters-list"></div>
         <div id="grid-preview"></div>
         <br><br><div id="add-project" ></div>
         <div id="param-zone"></div>
         <div id="copyright-zone"></div>
-    </body>
+    </div></body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<style>
+.md-header {
+    display: none;
+    
+}    
+     
+#container-loader {
+  width: 100px;
+  height: 425px;
+  position: absolute;
+  top: calc(50% - 17px);
+  left: calc(50% - 35px);
+}
+    
+    
+#loader {
+  width: 70px;
+  height: 70px;
+  border-style: solid;
+  border-top-color: black;
+  border-right-color: black;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotate 3s ease-in-out infinite;
+  transform: rotate(-200deg)
+}
+@keyframes rotate {
+  0% { border-width: 10px; }
+  25% { border-width: 3px; }
+  50% { 
+    transform: rotate(360deg); 
+    border-width: 10px;
+  }
+  75% { border-width: 3px;}
+  100% { border-width: 10px;}
+}
+</style>

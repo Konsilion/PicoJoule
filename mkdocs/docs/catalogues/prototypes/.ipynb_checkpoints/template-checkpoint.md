@@ -1,21 +1,70 @@
 ---
 hide:
     - toc
-    - navigation
 ---
 
 # TITRE DE LA PAGE
 
-[//]: # (MODIFIER LA SOURCE 'src' par la catalogue que vous souhaitez embarquer ////////////)
 
-<iframe class="iframe-forge" src="/catalogues/prototypes/catalogue" width="100%" height="900" frameborder="0" loading="lazy"></iframe>
+<!--- 1. Modifier la source (src) afin qu'elle indique le lien de votre catalogue-->
+
+<iframe class="iframe-forge" src="/catalogues/prototypes/catalogue" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
 
 
 
-
+<!--- 2. Modifier le lien ci-dessous afin qu'il indique la page de retour de votre catalogue.-->
+<script>
+function CatalogBack() {
+        window.location.href = "https://exemple.fr";
+    }
+</script>
 
 
 [//]: # (NE PAS MODIFIER CI-DESSOUS ////////////)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <style>
 /*=== MISE EN FORME DE LA PAGE ORIGINALE ===*/    
@@ -27,10 +76,13 @@ body {
     background-color: var(--back-color);
 }
   
-.md-footer, .md-content__inner.md-typeset > h1,a {
+.md-content__inner.md-typeset > h1,a {
     display: none;
 }    
 
+.md-footer__inner.md-grid {
+    display: none;
+}  
 
   
 /*=== IFRAME FORGE ===*/    
@@ -39,11 +91,9 @@ body {
     border: none;
     right: 0;
     top: 5rem;
-    padding-bottom:5rem;
+    padding-bottom:8rem;
     bottom: 0; 
     left: 0;
-    width: 100%;
-    height: 100%;
     }
 }    
 
@@ -51,7 +101,7 @@ body {
 @media only screen and (min-width: 1220px) {
 .iframe-forge {
     top: 5rem;
-    padding-bottom:5rem;
+    padding-bottom:8rem;
     }
 }
   
@@ -59,7 +109,7 @@ body {
 @media only screen and (max-width: 1219px) {
 .iframe-forge {
     top: 2.4rem;
-    padding-bottom:2.4rem;
+    padding-bottom:8rem;
     }
 }
 

@@ -46,7 +46,7 @@ nav:
   - Communauté:
       - Documentation collaborative ?: informations/premiers_pas.md
       - Tablecsv: tablecsv/table2.md
-      - Grid: tablecsv/grid.md
+      - Catalogue prototypes: catalogues/prototypes/template.md
       - informations/visio.md
       - Contacts: 
           - informations/contacts.md

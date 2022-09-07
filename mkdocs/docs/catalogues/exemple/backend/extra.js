@@ -13,7 +13,7 @@ window.onload = function() {
     // -----> Filtres principaux
     Papa.parse("../data/filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = results.data;
@@ -24,7 +24,7 @@ window.onload = function() {
     // -----> Filtres secondaire
     Papa.parse("../data/s_filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = arr_filters.concat(results.data);
@@ -35,7 +35,7 @@ window.onload = function() {
     // -----> Données de votre liste de projet - Gridcard
     Papa.parse("../data/data.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             htmlTableGenerator(results.data);
@@ -124,7 +124,7 @@ function htmlTableGenerator(content) {
             html += '<div class="container filterDiv ' + data[index][3] + '">';
                html += '<a href="' + data[index][2] + '" target="_blank">'; 
                     html += '<div class="column_catalog">';
-                        if(data[index][4] !== ""){html += '<div class="img_grid"><img class="img_card" src="' + data[index][4] + '"></div>';} else {html += '<div class="img_grid"><img class="img_card" src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg"></div>';}
+                        if(typeof data[index][4]=="string"){html += '<div class="img_grid"><img class="img_card" src="' + data[index][4] + '"></div>';} else {html += '<div class="img_grid"><img class="img_card" src="https://cdn.pixabay.com/photo/2015/07/05/10/18/tree-832079__340.jpg"></div>';}
                         html += '<div class="card-title">';
                             html += '<p>' + data[index][0] + '</p>';
                         html += '</div>';
@@ -372,6 +372,18 @@ function modifFilters(element,c) {
 
 
 
+// -----> Appel la fonction dans la page parente
+function BackBtn(){
+   parent.CatalogBack();
+}
+
+
+
+
+// ============== Fonction en essai =================
+
+
+
 // -----> Affiche les filtres courant pour une meilleur visualisation
 function listFilters(){
     
@@ -387,50 +399,12 @@ function listFilters(){
 }
 
 
-
 // -----> Recherche vertical array
 function VlookUp(arr, value){
     for (var i = 0, len = arr.length; i < len; i++){ 
         if (arr[i][0] == value) return arr[i][1];
     };
 }
-
-
-
-
-
-// -----> Recherche par nom de projet - (pas trop maitrisé mais fonctionne)
-function SearchBar() {
-    var input, filter, li, a, i, txtValue;
-    input = document.getElementById("myInput");
-    filter = input.value.toUpperCase();
-    li = document.getElementsByClassName("filterDiv");
-    for (i = 0; i < li.length; i++) {
-        a = li[i].getElementsByTagName("a")[0];
-        txtValue = a.textContent || a.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            li[i].style.display = "";
-        } else {
-            li[i].style.display = "none";
-        }
-    }
-}
-
-
-
-
-
-// -----> Appel la fonction dans la page parente
-function BackBtn(){
-   parent.CatalogBack();
-}
-
-
-
-// ============== Fonction en essai =================
-
-
-
 
 
 

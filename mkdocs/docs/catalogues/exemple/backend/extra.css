@@ -67,23 +67,6 @@ body {
  
 -----------------------------------------------------------*/    
 
-
-
-#myInput {
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-  border-radius: 15px;
-
-}
-
-
-
 #filters-zone {
     padding: 25px 25px 10px 25px;
     width: 100%; 
@@ -345,7 +328,6 @@ body {
    
 
 .img_grid {
-      background-color: white;  
   border: none;  
   height: 150px; 
   display: flex; 
@@ -364,8 +346,6 @@ body {
   
 .card-title {
     border: none;
-    border-top: 1px solid grey;
-    background-color: var(--back-color);
     margin:0px;
     padding: 0px 15px 0px 15px;
 }      
