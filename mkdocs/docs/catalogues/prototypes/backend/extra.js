@@ -100,7 +100,7 @@ function html_s_FilterGenerator(content) {
     
     data.forEach(function(row, index) {    
         html += '<li>';
-        html += '<button descr="' + data[index][1] + '" class="neumorphic-btn ' + data[index][2] + ' tooltip" onclick="modifFilters(this,\'' + data[index][0] + '\')"></button>';
+        html += '<button descr="' + data[index][1] + '" class="neumorphic-btn ' + data[index][2] + '" onclick="modifFilters(this,\'' + data[index][0] + '\')"></button>';
         html += '</li>';
     });
     
@@ -180,33 +180,39 @@ function htmlParamGenerator(content) {
     html += "</details>";
     
     param_zone.innerHTML = html;
-      
-       
-    // -----> Ajouter un projet - lien git
-    
-    let add_project = document.getElementById('add-project'); 
-    
-    html = '<a href="' + data[0][1] + '" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-pen"></i> Ajouter votre projet</button></a><br><br>';
 
-    add_project.innerHTML = html;    
-    
     
     // -----> Copyright
     
     let copyright_zone = document.getElementById('copyright-zone'); 
     
-    html = data[2][1];
+    html = '<p style="text-align:right;color:#CAC7C7;font-size:14px;"><i>' + data[2][1] + '</i></p';
 
     copyright_zone.innerHTML = html;
     
     
+    // -----> Logo et titre
+    
+    let Banner = document.getElementById('Banner');
+    
+    html = '<h2 style="vertical-align: middle;">Bienvenue sur la Forge de Picojoule</h2>';
+    
+    Banner.innerHTML = html;
     
     // -----> Ajouter les boutons de navigation
     
     let btn_zone = document.getElementById('btn-zone'); 
 
-    html = '<button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button><button class="btn neumorphic-btn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-magnifying-glass"></i>  Les filtres</button><button class="btn neumorphic-btn btn-reset" onclick="all_grid()">Réinitialiser</button>';
-
+    html = '<div><button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button>';
+    
+    html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-filter"></i>  Filtres</button>';
+    
+    html += '<button class="btn neumorphic-btn btn-reset" onclick="all_grid()"><i class="fa-solid fa-xmark"></i>  Réinitialiser</button>';
+    
+    html += '<button class="btn neumorphic-btn" id="btn-add" onclick="show(\'popup2\')"><i class="fa-solid fa-plus"></i> Ajouter un projet</button>';
+    
+    html += '<input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Recherche ..." title="Type in a name"></div>';
+    
     btn_zone.innerHTML = html;
 }
 
@@ -319,6 +325,7 @@ function filterStrictIndex(x,c) {
 function HideShowFilters(element) {
     document.getElementById(element).classList.toggle("show");
     document.getElementById(element).classList.toggle("hide");
+    document.getElementById("FilterBtn").classList.toggle("active");
 }
 
 
@@ -427,11 +434,22 @@ function BackBtn(){
 
 
 
+
+// -----> Afficher le pop up d'ajout de projet
+$ = function(id) {
+  return document.getElementById(id);
+}
+
+var show = function(id) {
+	$(id).style.display ='block';
+}
+var hide = function(id) {
+	$(id).style.display ='none';
+}
+
+
+
 // ============== Fonction en essai =================
-
-
-
-
 
 
 

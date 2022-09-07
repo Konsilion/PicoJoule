@@ -7,6 +7,9 @@
 /* ---- Variables d'environnement ---- */
 :root {
   --back-color: #F3F3F3;
+  --shadow-nump: 4px 7px 8px rgba(55, 84, 170, .25),
+              -4px -7px 10px rgba(255, 255, 255, 1),
+              0px 0px 4px rgba(255, 255, 255, 0) !important;
 }
 
 
@@ -30,6 +33,10 @@
 /* ---- Couleur de fond ---- */
 body {
   background-color: var(--back-color);
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;    
 }
 
 
@@ -41,10 +48,54 @@ body {
 
 /* ---- Nécessaire ---- */
 .md-main__inner.md-grid {
-    margin:0;
-    padding:0;
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
 }
    
+
+
+.md-content__inner.md-typeset {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+}
+
+
+/* pas sur */
+
+.md-main {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+
+
+}
+
+
+.md-main__inner.md-grid {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+}
+
+
+.md-content {
+    margin:0 !important;
+    padding:0 !important;
+    height:auto !important;
+    width:auto !important;
+
+
+}
+
+.container-loader {}
+
+
 
 
 
@@ -70,17 +121,44 @@ body {
 
 
 #myInput {
-  background-image: url('https://www.w3schools.com/css/searchicon.png');
-  background-position: 10px 12px;
-  background-repeat: no-repeat;
-  width: 100%;
+  background-color: #E7E7E7;
+  width: 25%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px;
+  padding: 12px 12px 12px 12px;
   border: 1px solid #ddd;
   margin-bottom: 12px;
   border-radius: 15px;
-
+  transition: width 0.6s linear;
+  transition: background-color 0.1s linear;
 }
+
+
+#myInput:hover {
+    background-color: white;
+}
+
+#myInput:focus {
+    background-color: white;
+    width: 40%;
+    transition: width 0.3s linear;
+}
+
+
+#catalog-navbar {
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 50px;
+    border-bottom: solid 1px #8E8E8E;
+    box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
+    transition: box-shadow 0.5s linear;
+}
+
+#catalog-navbar:hover {
+    box-shadow: 0px 25px 22px -32px rgba(30, 30, 30, 0.7);
+}
+
+
+
+
 
 
 
@@ -179,16 +257,13 @@ body {
   text-align:center;  
   padding: 10px 40px;
   border-radius: 50px;
-  color: #6D7587;
-  background-color: var(--back-color);
-  box-shadow: 7px 7px 8px rgba(55, 84, 170, .15),
-              -7px -7px 10px rgba(255, 255, 255, 1),
-              0px 0px 4px rgba(255, 255, 255, 0) !important;
+  color: grey;
+  background-color: #f8f8f8;
+  box-shadow: var(--shadow-nump);
   transition: box-shadow 0.8s ease;
 }
 
 .neumorphic-btn:hover {
-  color: black;
   box-shadow: inset 7px 7px 8px rgba(55, 84, 170, .15),
               inset -7px -7px 10px rgba(255, 255, 255, 1),
               inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
@@ -273,18 +348,30 @@ body {
 2.     container
     2.1    column-catalog
         2.1.1  img-grid (contenant img-card)
-        2.1.2  card title
+        2.1.2  card-title
     2.2    overlay   
 ------------------------------------------------*/
 
 
+#grid-preview {
+    /*background-color: white;*/
+}
+
+
+#Banner {
+    margin:0px;
+    padding:0px;
+}
+
 .grid-container { 
-    display: grid; 
-    grid-template-columns: 24% 24% 24% 24%; 
-    gap: 25px; 
+    display: grid;
+    grid-template-columns: 22% 22% 22% 22%; 
+    gap: 40px; 
     background-color: rgba(255, 255, 255, 0); 
-    padding: 10px; 
+    padding: 10px;
+    
 } 
+
 
 .grid-container > div { 
     text-align: left;
@@ -292,12 +379,13 @@ body {
 }
 
 
+
 /*=== Navtabs show - Grand écran ===*/
 @media only screen and (max-width: 1200px) {
     .grid-container { 
     display: grid; 
     grid-template-columns: 45% 45%; 
-    gap: 15px; 
+    gap: 40px; 
     background-color: rgba(255, 255, 255, 0); 
     padding: 10px; 
     }
@@ -308,7 +396,7 @@ body {
     .grid-container { 
     display: grid; 
     grid-template-columns: 95%; 
-    gap: 15px; 
+    gap: 40px; 
     background-color: rgba(255, 255, 255, 0); 
     padding: 10px; 
     }
@@ -318,8 +406,10 @@ body {
 .container {
     border: none;
     position: relative;
+    border-radius:10px;
 }
-    
+
+
 .container:hover .overlay {
   height: 100%;
   padding: 0px 10px 0px 10px;  
@@ -330,12 +420,13 @@ body {
     border: none;
     padding: 0px 0px 0px 0px;
     outline: 1px solid #CCC;
+    border-radius: 10px;
     height:200px;
     overflow-y: hidden;
     overflow-x: hidden;
-    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
-} 
-       
+    background-color: white;
+}
+
 
 .column_catalog p {
     color:grey;
@@ -365,7 +456,6 @@ body {
 .card-title {
     border: none;
     border-top: 1px solid grey;
-    background-color: var(--back-color);
     margin:0px;
     padding: 0px 15px 0px 15px;
 }      
@@ -375,7 +465,7 @@ body {
   color: black;
   font-size: 18px;  
   position: absolute;
-  border-radius: 0px; 
+  border-radius: 10px; 
   bottom: 0;
   left: 0;
   right: 0;
@@ -383,7 +473,7 @@ body {
   overflow: hidden;
   width: 100%;
   height: 0;
-  transition: .3s ease;  
+  transition: .3s ease;
 }
 
     
@@ -419,8 +509,17 @@ body {
     
 /* ---- Particularité du boutons réinitialiser ----- */
 .btn-reset:hover {
-    color: white;  
+    color: white !important;  
     background-color: #DD160A;
+    box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
+              inset -7px -7px 10px rgba(255, 255, 255, 0.2),
+              inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+
+#btn-add:hover {
+    color: white !important;  
+    background-color: green;
     box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
               inset -7px -7px 10px rgba(255, 255, 255, 0.2),
               inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
@@ -429,8 +528,15 @@ body {
 
 
 
+#param-zone {
+    border-top: solid 1px #e0dfdf;
+    box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
+    transition: box-shadow 0.5s linear;
+}
 
-
+#param-zone:hover {
+    box-shadow: 0px -25px 22px -32px rgba(30, 30, 30, 0.7);
+}
 
     
 

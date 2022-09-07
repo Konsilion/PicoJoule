@@ -43,23 +43,96 @@ hide:
     <link rel="stylesheet" href="../backend/extra.css">
 </head>
     <body><div id="content" class="hide">
-        <div id="btn-zone"></div>
-        <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
-            <div id="grid-filter"></div>
-            <hr><div id="grid-s-filter"></div>
-        </div><br>
-        <input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Recherche ..." title="Type in a name">
-        <div style="text-align:right;justify-content: right;" id="filters-list"></div>
+        <div id="Banner"></div>
+        <div id="catalog-navbar">
+            <div id="btn-zone"></div>
+            <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
+                <br><div id="grid-filter"></div>
+                <hr><div id="grid-s-filter"></div>
+                <div id="param-zone"></div>
+            </div><br>
+        </div>
+        <div style="text-align:left;justify-content: left;" id="filters-list"></div>
         <div id="grid-preview"></div>
-        <br><br><div id="add-project" ></div>
-        <div id="param-zone"></div>
-        <div id="copyright-zone"></div>
-    </div></body>
+        <hr><div id="copyright-zone"></div>
+        <div class="popup" id="popup2">
+    <div class="neumorphic-card">
+    <a href="#" onclick="hide('popup2')"><i style="color: red;" class="fa-solid fa-xmark"></i>  Fermer</a>
+    <h2 style="text-align:center; margin-top:0px;">Comment ajouter un projet ?</h2><hr>
+            <details class="tip"><summary>Informations à renseignées</summary>
+                <ul>
+                    <li>sa <b>designation</b>,</li>
+                    <li>une <b>description</b>,</li>
+                    <li>son <b>adresse web principale</b>,</li>
+                    <li>les <b>catégories associées</b>, (vous pouvez consulter les filtres <u><a href="#">principaux</a></u> ou <u><a href="#">secondaires</a></u>)</li>
+                    <li>un lien web vers <b>une image</b>,</li>
+                    <li>et les différents <b>partenaires</b>.</li>   
+                </ul>
+            </details><hr>
+        <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet</p><a><button onclick="#" class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a><hr>
+        <p>Vous pouvez également remplir notre <b>formulaire contact</b></p><a><button onclick="#" class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
+    </div>
+        </div>
+    </div>   
+    </body>
 </html>
 
 
 
+<style>
 
+    
+.popup {
+  overflow-y: scroll;  
+  display: none; 
+  z-index: 0;
+  position: fixed;
+  top: 25px;
+  bottom: 25px;  
+  left: 25px;
+  right: 25px;  
+  margin-bottom: 0px;
+  margin-right: 0px;    
+}
+    
+/*=== Navtabs hide - Petit écran ===*/
+@media only screen and (min-width: 900px) {
+    .popup { 
+      left: 20%;
+      right: 20%;
+    }
+}      
+
+
+    
+    
+    
+    
+    
+    
+
+#popup2:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+}
+
+#popup2:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0);
+  z-index: -1;
+}
+</style>
 
 
 
