@@ -54,8 +54,8 @@ hide:
                     <li>et les différents <b>partenaires</b>.</li>   
                 </ul>
             </details><hr>
-        <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet</p><a href="https://ecrire3.wixsite.com/picojoule/contact" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a><hr>
-        <p>Vous pouvez également remplir notre <b>formulaire contact</b></p><a href="https://ecrire3.wixsite.com/picojoule/contact" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
+        <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet, nous la validerons au plus vite.</p><a href="https://github.com/Konsilion/PicoJoule/edit/master/mkdocs/docs/catalogues/prototypes/data/data.csv" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a><hr>
+        <p>Sinon, vous pouvez également remplir notre <b>formulaire contact</b> en nous renseignant les informations ci-dessus.</p><a href="https://ecrire3.wixsite.com/picojoule/contact" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
     </div>
         </div>
     </div>   
@@ -101,7 +101,7 @@ hide:
   left: 0;
   bottom: 0;
   right: 0;
-  background-color: #D5D5D5;
+  background-color: #F5F5F5;
   z-index: -2;
 }
 
@@ -111,7 +111,7 @@ hide:
   top: 0;
   left: 0;
   bottom: 0;
-  background-color: #D5D5D5;
+  background-color: #F5F5F5;
   right: 0;
   z-index: -1;
 }
