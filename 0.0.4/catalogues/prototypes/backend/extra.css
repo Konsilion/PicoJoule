@@ -452,7 +452,7 @@ article > p {
     height:210px;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: #E4E2E2;
+    background-color: #F5F5F5;
 }
 
 
@@ -492,7 +492,7 @@ article > p {
   
 .card-title > p {
     font-size: 16px;
-    line-height: 19px;
+    line-height: 21px;
 }    
 
 

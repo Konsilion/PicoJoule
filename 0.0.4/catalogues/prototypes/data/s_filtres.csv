@@ -1,3 +1,4 @@
-s_f1; ACV; fa-brands fa-stumbleupon-circle
-s_f2; Epuration; fa-solid fa-soap
-s_f3; Stages; fa-solid fa-graduation-cap
+CODE,Nom du filtre
+s_f1,ACV
+s_f2,Epuration
+s_f3,Stages

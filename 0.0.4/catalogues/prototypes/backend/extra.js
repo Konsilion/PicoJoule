@@ -13,7 +13,7 @@ window.onload = function() {
     // -----> Filtres principaux
     Papa.parse("../data/filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = results.data;
@@ -24,7 +24,7 @@ window.onload = function() {
     // -----> Filtres secondaire
     Papa.parse("../data/s_filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = arr_filters.concat(results.data);
@@ -96,7 +96,7 @@ function html_s_FilterGenerator(content) {
 
     let html = '';
     
-    const data = content.slice(0);
+    const data = content.slice(1);
     
     data.forEach(function(row, index) {    
         html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\''+ data[index][0] +'\');"> ' + data[index][1] + '</button>'
@@ -429,7 +429,9 @@ function SearchBar() {
 
 // -----> Appel la fonction dans la page parente
 function BackBtn(){
-   parent.CatalogBack();
+   //parent.CatalogBack();
+   window.open("https://picojoule.fr/", "_self"); 
+    
 }
 
 
