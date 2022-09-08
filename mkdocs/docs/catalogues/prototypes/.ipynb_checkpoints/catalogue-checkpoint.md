@@ -49,7 +49,7 @@ hide:
                     <li>sa <b>designation</b>,</li>
                     <li>une <b>description</b>,</li>
                     <li>son <b>adresse web principale</b>,</li>
-                    <li>les <b>catégories associées</b>, (vous pouvez consulter les filtres <u><a href="#">principaux</a></u> ou <u><a href="#">secondaires</a></u>)</li>
+                    <li>les <b>catégories associées</b>, (vous pouvez consulter les filtres <u><a href="https://github.com/Konsilion/PicoJoule/blob/master/mkdocs/docs/catalogues/prototypes/data/filtres.csv" target="_blank">principaux</a></u> ou <u><a href="https://github.com/Konsilion/PicoJoule/blob/master/mkdocs/docs/catalogues/prototypes/data/s_filtres.csv" target="_blank">secondaires</a></u>)</li>
                     <li>un lien web vers <b>une image</b>,</li>
                     <li>et les différents <b>partenaires</b>.</li>   
                 </ul>

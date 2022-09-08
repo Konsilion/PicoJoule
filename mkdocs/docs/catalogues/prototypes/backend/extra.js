@@ -13,7 +13,7 @@ window.onload = function() {
     // -----> Filtres principaux
     Papa.parse("../data/filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = results.data;
@@ -24,7 +24,7 @@ window.onload = function() {
     // -----> Filtres secondaire
     Papa.parse("../data/s_filtres.csv", { 
         download: true,
-        delimiter: ";",
+        delimiter: ",",
         skipEmptyLines: true,
         complete: results => {
             arr_filters = arr_filters.concat(results.data);
