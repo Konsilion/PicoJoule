@@ -263,7 +263,7 @@
               
                 
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -703,8 +703,6 @@
         
           
         
-          
-        
       
       
         <label class="md-nav__link" for="__nav_5">
@@ -753,20 +751,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tablecsv/grid/" class="md-nav__link">
-        Grid
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../../informations/visio/" class="md-nav__link">
         Visioconférences publiques
       </a>
@@ -784,7 +768,7 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_5" type="checkbox" id="__nav_5_5" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
       
       
       
@@ -793,13 +777,13 @@
         
       
       
-        <label class="md-nav__link" for="__nav_5_5">
+        <label class="md-nav__link" for="__nav_5_4">
           Contacts
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Contacts" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_5">
+        <label class="md-nav__title" for="__nav_5_4">
           <span class="md-nav__icon md-icon"></span>
           Contacts
         </label>
@@ -869,7 +853,16 @@
 
 
 <h1 id="titre-de-la-page">TITRE DE LA PAGE</h1>
-<iframe class="iframe-forge" src="/catalogues/prototypes/catalogue" width="100%" height="900" frameborder="0" loading="lazy"></iframe>
+<!--- 1. Modifier la source (src) afin qu'elle indique le lien de votre catalogue-->
+
+<iframe class="iframe-forge" src="/catalogues/prototypes/catalogue" width="100%" height="100%" frameborder="0" loading="lazy"></iframe>
+
+<!--- 2. Modifier le lien ci-dessous afin qu'il indique la page de retour de votre catalogue.-->
+<script>
+function CatalogBack() {
+        window.location.href = "https://exemple.fr";
+    }
+</script>
 
 <style>
 /*=== MISE EN FORME DE LA PAGE ORIGINALE ===*/    
@@ -881,10 +874,13 @@ body {
     background-color: var(--back-color);
 }
 
-.md-footer, .md-content__inner.md-typeset > h1,a {
+.md-content__inner.md-typeset > h1,a {
     display: none;
 }    
 
+.md-footer__inner.md-grid {
+    display: none;
+}  
 
 
 /*=== IFRAME FORGE ===*/    
@@ -893,11 +889,9 @@ body {
     border: none;
     right: 0;
     top: 5rem;
-    padding-bottom:5rem;
+    padding-bottom:8rem;
     bottom: 0; 
     left: 0;
-    width: 100%;
-    height: 100%;
     }
 }    
 
@@ -905,7 +899,7 @@ body {
 @media only screen and (min-width: 1220px) {
 .iframe-forge {
     top: 5rem;
-    padding-bottom:5rem;
+    padding-bottom:8rem;
     }
 }
 
@@ -913,7 +907,7 @@ body {
 @media only screen and (max-width: 1219px) {
 .iframe-forge {
     top: 2.4rem;
-    padding-bottom:2.4rem;
+    padding-bottom:8rem;
     }
 }
 
