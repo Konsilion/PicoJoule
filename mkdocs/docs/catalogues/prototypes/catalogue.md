@@ -31,8 +31,8 @@ hide:
         <div id="catalog-navbar">
             <div id="btn-zone"></div>
             <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
-                <br><div id="grid-filter"></div>
-                <br><div id="grid-s-filter"></div>
+                <br><b>Filtres principaux</b><div id="grid-filter"></div>
+                <b>Filtres secondaires</b><div id="grid-s-filter"></div>
                 <div id="param-zone"></div>
             </div><br>
         </div>
@@ -54,8 +54,8 @@ hide:
                     <li>et les différents <b>partenaires</b>.</li>   
                 </ul>
             </details><hr>
-        <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet</p><a><button onclick="#" class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a><hr>
-        <p>Vous pouvez également remplir notre <b>formulaire contact</b></p><a><button onclick="#" class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
+        <p>Si vous possèdez un <b>compte GitHub</b>, vous pouvez ajouter directement votre projet</p><a href="https://ecrire3.wixsite.com/picojoule/contact" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-brands fa-github"></i> Ajouter votre projet</button></a><hr>
+        <p>Vous pouvez également remplir notre <b>formulaire contact</b></p><a href="https://ecrire3.wixsite.com/picojoule/contact" target="_blank"><button class="neumorphic-btn" style="width:100%;"><i class="fa-solid fa-plus"></i> Ajouter votre projet</button></a><hr>
     </div>
         </div>
     </div>   

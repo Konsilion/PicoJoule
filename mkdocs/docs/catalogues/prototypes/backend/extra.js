@@ -94,17 +94,14 @@ function html_s_FilterGenerator(content) {
 
     let grid_s_filter = document.getElementById('grid-s-filter');
 
-    let html = '<ul>';
+    let html = '';
     
     const data = content.slice(0);
     
     data.forEach(function(row, index) {    
-        html += '<li>';
-        html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\''+ data[index][0] +'\');"><i style="font-size:20px;" class="' + data[index][2] + '"></i><div class="DescrFilter">  ' + data[index][1] + '</div></button>'
-        html += '</li>';
+        html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\''+ data[index][0] +'\');"> ' + data[index][1] + '</button>'
     });
-    
-    html += '</ul>';   
+     
     
     grid_s_filter.innerHTML = html;
 }
@@ -468,12 +465,9 @@ function TagFilterClick(element,c) {
 
 }
 
-// ============== Fonction en essai =================
 
 
-
-
-
+// -----> Afficher masquer la nav-bar catalogue
 function ShowMobileNav() {    
     if (document.getElementById("catalog-navbar").style.display == "block"){
         document.getElementById("catalog-navbar").style.display = "none";
@@ -482,6 +476,14 @@ function ShowMobileNav() {
     
     }
 }
+
+
+
+
+// ============== Fonction en essai =================
+
+
+
 
 
 

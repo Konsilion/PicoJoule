@@ -167,11 +167,23 @@ article > p {
 } 
 
 
-
-
 #filters-list {
     padding: 0px 25px 0px 25px;
 }
+
+
+
+#grid-s-filter { 
+    padding-top: 25px;
+    margin-bottom: 25px;
+    border-top: solid 1px #e0dfdf;
+} 
+
+#grid-filter { 
+    padding-top: 25px;
+    margin-bottom: 25px;
+    border-top: solid 1px #e0dfdf;
+} 
 
 
 .filter_descr {
@@ -226,12 +238,6 @@ article > p {
 
 
 
-
-
-
-
-
-
 /* This will trigger the CSS */
 /* transition animation on hover */
 
@@ -253,6 +259,8 @@ article > p {
     transition: height 0.10s ease-in;
     transition-delay:0.55s;
 } 
+
+
 
 
 
@@ -292,11 +300,6 @@ article > p {
               inset -7px -7px 10px rgba(255, 255, 255, 0.5),
               inset 7px 7px 10px rgba(70, 70, 70, 0.12);
 }
-
-
-
-
-
 
 
 .neumorphic-card {
@@ -449,12 +452,12 @@ article > p {
     height:210px;
     overflow-y: hidden;
     overflow-x: hidden;
-    background-color: white;
+    background-color: #E4E2E2;
 }
 
 
 .column_catalog p {
-    color:grey;
+    color:black;
     font-size:20px;
     margin-top: 10px;
 }
@@ -572,7 +575,6 @@ article > p {
 
 
 #param-zone {
-    border-top: solid 1px #e0dfdf;
     box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
     transition: box-shadow 0.5s linear;
 }
@@ -612,13 +614,7 @@ article > p {
 
 
     
-.grid-filter { 
-    display: grid; 
-    grid-template-columns: 50% 50%; 
-    gap: 15px; 
-    background-color: rgba(255, 255, 255, 0); 
-    padding: 10px; 
-} 
+
 
 
 #param-detail {
