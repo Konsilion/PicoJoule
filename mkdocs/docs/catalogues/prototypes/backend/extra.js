@@ -148,13 +148,13 @@ function htmlParamGenerator(content) {
     
     let param_zone = document.getElementById('param-zone');   
     
-    let html = '<details id="param-detail" class="note"><summary>Paramètre avancé de recherche</summary>';    
+    let html = '<details id="param-detail" class="tip"><summary>Paramètre avancé de recherche</summary>';    
     
     // -----> Ajouter ce catalogue à votre site internet - lien iframe
     
     let ifram_code = '<code><</code><code>iframe src="' + data[1][1] +'" width="100%" height="900" frameborder="0" loading="lazy"><</code><code>/iframe></code>';
     
-    html += '<details class="tip"><summary>Utiliser ce catalogue sur votre site</summary>';
+    html += '<details class="abstract"><summary>Utiliser ce catalogue sur votre site</summary>';
     
     html += '<ul><li><p>Voici la balise html permettant son import, largeur et hauteur sont modifiables :</p>';
     
@@ -167,7 +167,7 @@ function htmlParamGenerator(content) {
       
     // -----> Activer la recherche croisée - A SORTIR DE CE BLOC PARAMETRES
     
-    html += '<details class="tip"><summary>Activer la recherche combinée</summary>';
+    html += '<details class="note"><summary>Activer la recherche combinée</summary>';
     
     html += '<div class="item">';
         
@@ -186,7 +186,7 @@ function htmlParamGenerator(content) {
     
     let copyright_zone = document.getElementById('copyright-zone'); 
     
-    html = '<p style="text-align:right;color:#CAC7C7;font-size:14px;"><i>' + data[2][1] + '</i></p';
+    html = '<p style="margin:10px;text-align:right;color:#CAC7C7;font-size:14px;"><i>' + data[2][1] + '</i></p';
 
     copyright_zone.innerHTML = html;
     
@@ -195,7 +195,7 @@ function htmlParamGenerator(content) {
     
     let Banner = document.getElementById('Banner');
     
-    html = '<h2 style="vertical-align: middle;">Bienvenue sur la Forge de Picojoule</h2>';
+    html = '<h2 style="vertical-align: middle;padding-left:15px;">Bienvenue sur la Forge de Picojoule</h2>';
     
     Banner.innerHTML = html;
     

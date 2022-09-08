@@ -56,10 +56,10 @@ hide:
         <div id="grid-preview"></div>
         <hr><div id="copyright-zone"></div>
         <div class="popup" id="popup2">
-    <div class="neumorphic-card">
+    <div>
     <a href="#" onclick="hide('popup2')"><i style="color: red;" class="fa-solid fa-xmark"></i>  Fermer</a>
     <h2 style="text-align:center; margin-top:0px;">Comment ajouter un projet ?</h2><hr>
-            <details class="tip"><summary>Informations à renseignées</summary>
+            <details class="tip"><summary>Informations à renseigner</summary>
                 <ul>
                     <li>sa <b>designation</b>,</li>
                     <li>une <b>description</b>,</li>
@@ -82,8 +82,7 @@ hide:
 <style>
 
     
-.popup {
-  overflow-y: scroll;  
+.popup {  
   display: none; 
   z-index: 0;
   position: fixed;
@@ -92,7 +91,8 @@ hide:
   left: 25px;
   right: 25px;  
   margin-bottom: 0px;
-  margin-right: 0px;    
+  margin-right: 0px;
+  background-color: white;
 }
     
 /*=== Navtabs hide - Petit écran ===*/
@@ -103,8 +103,6 @@ hide:
     }
 }      
 
-
-    
     
     
     
@@ -118,7 +116,7 @@ hide:
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0,0,0,0.5);
+  background-color: #D5D5D5;
   z-index: -2;
 }
 
@@ -128,8 +126,8 @@ hide:
   top: 0;
   left: 0;
   bottom: 0;
+      background-color: #D5D5D5;
   right: 0;
-  background: rgba(0,0,0,0);
   z-index: -1;
 }
 </style>
@@ -146,6 +144,7 @@ hide:
 }    
      
 #container-loader {
+  display:none;  
   width: 100px;
   height: 425px;
   position: absolute;

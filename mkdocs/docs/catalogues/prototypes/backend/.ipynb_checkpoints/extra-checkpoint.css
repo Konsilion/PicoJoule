@@ -6,7 +6,7 @@
 
 /* ---- Variables d'environnement ---- */
 :root {
-  --back-color: #F3F3F3;
+  --back-color: #F5F5F5;
   --shadow-nump: 4px 7px 8px rgba(55, 84, 170, .25),
               -4px -7px 10px rgba(255, 255, 255, 1),
               0px 0px 4px rgba(255, 255, 255, 0) !important;
@@ -89,11 +89,9 @@ body {
     padding:0 !important;
     height:auto !important;
     width:auto !important;
-
-
 }
 
-.container-loader {}
+
 
 
 
@@ -121,7 +119,7 @@ body {
 
 
 #myInput {
-  background-color: #E7E7E7;
+  background-color: #F5F5F5;
   width: 25%;
   font-size: 16px;
   padding: 12px 12px 12px 12px;
@@ -145,15 +143,18 @@ body {
 
 
 #catalog-navbar {
-    padding: 10px 10px 0px 10px;
+    padding: 50px 0px 0px 0px;
     margin-bottom: 50px;
     border-bottom: solid 1px #8E8E8E;
+    border-top: solid 1px #8E8E8E;
+    background-color: #E5E5E5;
     box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
-    transition: box-shadow 0.5s linear;
+    transition: box-shadow 0.5s linear, background-color 0.5s linear;
 }
 
 #catalog-navbar:hover {
     box-shadow: 0px 25px 22px -32px rgba(30, 30, 30, 0.7);
+    background-color: #EEEEEE;
 }
 
 
@@ -279,11 +280,7 @@ body {
   
 .neumorphic-card {
   display: block;    
-  background-color: var(--back-color) !important;
   padding: 40px;  
-  box-shadow: inset 7px 7px 8px rgba(55, 84, 170, .15),
-              inset -7px -7px 10px rgba(255, 255, 255, 1),
-              inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
   border-radius: 8px;
 }
 
