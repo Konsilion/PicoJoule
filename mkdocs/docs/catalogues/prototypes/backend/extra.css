@@ -6,10 +6,10 @@
 
 /* ---- Variables d'environnement ---- */
 :root {
-  --back-color: #F5F5F5;
-  --shadow-nump: 4px 7px 8px rgba(55, 84, 170, .25),
-              -4px -7px 10px rgba(255, 255, 255, 1),
-              0px 0px 4px rgba(255, 255, 255, 0) !important;
+  --back-color: #FFFFFF;
+  --shadow-nump: 4px 7px 10px rgba(37, 98, 136, .2),
+                -4px -7px 10px rgba(255, 255, 255, 1),
+                0px 0px 4px rgba(255, 255, 255, 1) !important;
 }
 
 
@@ -63,43 +63,47 @@ body {
     width:auto !important;
 }
 
-
-/* pas sur */
-
-.md-main {
-    margin:0 !important;
-    padding:0 !important;
-    height:auto !important;
-    width:auto !important;
-
+.text > p {
+    font-size:16px;
 
 }
 
 
-.md-main__inner.md-grid {
-    margin:0 !important;
+/* SUPRIMMER ESPACE DU HAUT */
+
+article::before {
+    display: none !important;
+        margin:0 !important;
     padding:0 !important;
     height:auto !important;
     width:auto !important;
+
 }
 
-
-.md-content {
-    margin:0 !important;
+article > h1 {
+    display: none !important;
+        margin:0 !important;
     padding:0 !important;
     height:auto !important;
     width:auto !important;
 }
 
+article > p {
+    margin:0 !important;
+    padding:0 !important;
+    height:0 !important;
+    width:0 !important;
+}
 
 
 
 
-
-
-
-
-
+#btn-zone-mobile {
+    justify-content: left;
+    text-align: left;
+    font-size: 25px;
+    margin: 25px 0px 0px 25px
+}
 
 
 
@@ -120,11 +124,11 @@ body {
 
 #myInput {
   background-color: #F5F5F5;
-  width: 25%;
+  width: 32%;
   font-size: 16px;
   padding: 12px 12px 12px 12px;
   border: 1px solid #ddd;
-  margin-bottom: 12px;
+  margin: 0px 12px 0px 0px;
   border-radius: 15px;
   transition: width 0.6s linear;
   transition: background-color 0.1s linear;
@@ -137,65 +141,81 @@ body {
 
 #myInput:focus {
     background-color: white;
-    width: 40%;
+    width: 35%;
     transition: width 0.3s linear;
 }
 
 
 #catalog-navbar {
-    padding: 50px 0px 0px 0px;
-    margin-bottom: 50px;
-    border-bottom: solid 1px #8E8E8E;
-    border-top: solid 1px #8E8E8E;
-    background-color: #E5E5E5;
-    box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
-    transition: box-shadow 0.5s linear, background-color 0.5s linear;
+    z-index: 99 !important;
+    padding: 25px 25px 0px 25px;
+    border-radius:0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    border-bottom: solid 1px #B6B6B6;
+    background-color: #F5F5F5;
+    box-shadow: 0px 4px 6px 0px rgba(30, 30, 30, 0.2);
+    transition: background-color 0.5s linear, border-radius 0.5s linear;
 }
-
-#catalog-navbar:hover {
-    box-shadow: 0px 25px 22px -32px rgba(30, 30, 30, 0.7);
-    background-color: #EEEEEE;
-}
-
-
 
 
 
 
 
 #filters-zone {
-    padding: 25px 25px 10px 25px;
-    width: 100%; 
+    padding: 0px 0px 0px 0px;
+    width: 100%;
 } 
 
+
+
+
+#filters-list {
+    padding: 0px 25px 0px 25px;
+}
+
+
+.filter_descr {
+    padding: 0px;
+    margin:0px;
+    font: italic small-caps bold 16px/2 cursive !important;
+}
+
+#grid-filter, #grid-s-filter {
+    justify-content: left;
+    text-align: left;   
+}
+
+
+@media only screen and (max-width: 600px) {
+    #grid-filter, #grid-s-filter {
+        justify-content: center !important;
+        text-align: center !important;   
+    }
+}  
+
+
+#grid-s-filter > ul {
+    padding:0px;
+    margin:0px;
+}
+
+
 #grid-s-filter > ul > li{ /* will style only the top level li */
-	list-style: none;
+    list-style: none;
 	display: inline-block;
-    background:rgba(255, 255, 255, 0);
-	margin: 10px;
-	position:absoltue;
+    padding:0px;
+    margin:0px;
 }
     
 
-#grid-s-filter > ul > li > button{
-	font-size:24px;
-	padding: 25px;
-    width: 75px;
-    height: 75px;
-    text-align:center;
-}
-
-    
-    
     
 #grid-s-filter li ul{
+    font: italic small-caps bold 16px/2 cursive;
 	position:absolute;
 	list-style:none;
 	text-align:center;
 	width:500px;
 	top:70px;
-	font:bold 12px 'Open Sans Condensed', sans-serif;
-	
 	/* This is important for the show/hide CSS animation */
 	max-height:0px;
 	overflow:hidden;
@@ -205,31 +225,12 @@ body {
 }
 
 
-#grid-s-filter li ul li a{
-	padding:12px;
-	color:#fff !important;
-	text-decoration:none !important;
-	display:block;
-}
-
-#grid-s-filter li ul li:nth-child(odd){ /* zebra stripes */
-	background-color:#363636;
-}
-
-#grid-s-filter li ul li:hover{
-	background-color:#444;
-}
-
-#grid-s-filter li ul li:first-child{
-	border-radius:3px 3px 0 0;
-	margin-top:25px;
-}
 
 
-#grid-s-filter li ul li:last-child{
-	border-bottom-left-radius:50px;
-	border-bottom-right-radius:50px;
-}
+
+
+
+
 
 /* This will trigger the CSS */
 /* transition animation on hover */
@@ -238,9 +239,20 @@ body {
 	max-height:400px; /* Increase when adding more dropdown items */
 }
 
+.DescrFilter {
+    visibility: hidden;
+    height: 0;
+    transition: height 0.20s ease-out;
+    overflow: hidden;
 
+} 
 
-
+.neumorphic-btn.filtre:hover > .DescrFilter {
+    visibility: visible;
+    height: 20px;
+    transition: height 0.10s ease-in;
+    transition-delay:0.55s;
+} 
 
 
 
@@ -252,12 +264,13 @@ body {
 -----------------------------*/
 
 .neumorphic-btn {
-  font-size: 18px;
+  border: 3px solid #f8f8f8; 
+  font-size: 18px; 
   cursor: pointer;  
   margin: 0px 20px 20px 0px;
   text-align:center;  
   padding: 10px 40px;
-  border-radius: 50px;
+  border-radius: 10px;
   color: grey;
   background-color: #f8f8f8;
   box-shadow: var(--shadow-nump);
@@ -265,19 +278,27 @@ body {
 }
 
 .neumorphic-btn:hover {
+  border: 3px solid rgba(255, 255, 255, 0);   
   box-shadow: inset 7px 7px 8px rgba(55, 84, 170, .15),
               inset -7px -7px 10px rgba(255, 255, 255, 1),
               inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
 }
     
-.neumorphic-btn:active {
-  color: lightgreen;
-}
 
 .neumorphic-btn.active {
-  color: #52D10E;
+    color: #06c900;
+    box-shadow: 4px 7px 8px rgba(55, 84, 170, .25),
+              -4px -7px 10px rgba(255, 255, 255, 1),
+              inset -7px -7px 10px rgba(255, 255, 255, 0.5),
+              inset 7px 7px 10px rgba(70, 70, 70, 0.12);
 }
-  
+
+
+
+
+
+
+
 .neumorphic-card {
   display: block;    
   padding: 40px;  
@@ -292,42 +313,29 @@ body {
   padding: 6px 20px;
   border-radius: 5px;
   color: #6D7587;
-  background-color: var(--back-color);
-  box-shadow: 7px 7px 8px rgba(55, 84, 170, .15),
-              -7px -7px 10px rgba(255, 255, 255, 1),
+  background-color: white;
+  box-shadow: 3px 3px 4px rgba(55, 84, 170, .2),
+              -3px -3px 5px rgba(252, 252, 252, 1),
               0px 0px 4px rgba(255, 255, 255, 0) !important;
 }
 
-
-
-
-
-
-
-
-/*----------------------------
-    POP-UP SURVOL ELEMENTS 
------------------------------*/
-
-.tooltip:after{
- background:rgba(0,0,0,1);
- color:#fff;
- content:attr(descr);
- text-transform: lowercase; 
- border-radius: 10px;   
- display:block;
- margin-top:15px;
- padding: 25px;   
- position:absolute;
- opacity:0;
- -webkit-transition:opacity 1s ease 0.2s;
+.neumorphic-tag:hover {
+  font-size: 17px;  
+  margin: 0px 20px 20px 0px;
+  text-align:center;  
+  padding: 6px 20px;
+  border-radius: 5px;
+  color: #6D7587;
+  background-color: var(--back-color);
+  box-shadow: inset 3px 3px 4px rgba(55, 84, 170, .15),
+              inset -3px -3px 5px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
 }
 
-    
-.tooltip:hover:after{
- opacity:1;
- -webkit-transition:opacity 1s ease 100ms;
-}    
+
+
+
+
 
 
 
@@ -343,17 +351,20 @@ body {
 
 1.     grid-container
 2.     container
-    2.1    column-catalog
+    2.1    column_catalog
         2.1.1  img-grid (contenant img-card)
         2.1.2  card-title
     2.2    overlay   
 ------------------------------------------------*/
 
 
-#grid-preview {
-    /*background-color: white;*/
-}
 
+
+@media only screen and (min-width: 1200px) {
+    #grid-preview {
+       padding: 0px 75px 0px 75px;
+    }
+}
 
 #Banner {
     margin:0px;
@@ -370,10 +381,18 @@ body {
 } 
 
 
-.grid-container > div { 
-    text-align: left;
-    font-size: 20px; 
-}
+
+
+/*=== Navtabs show - Grand écran ===*/
+@media only screen and (max-width: 1400px) {
+    .grid-container { 
+    display: grid; 
+    grid-template-columns: 30% 30% 30%; 
+    gap: 40px; 
+    background-color: rgba(255, 255, 255, 0); 
+    padding: 10px; 
+    }
+} 
 
 
 
@@ -398,7 +417,16 @@ body {
     padding: 10px; 
     }
 }     
-   
+ 
+
+
+.grid-container > div { 
+    text-align: left;
+    font-size: 20px; 
+}
+
+
+
 
 .container {
     border: none;
@@ -418,7 +446,7 @@ body {
     padding: 0px 0px 0px 0px;
     outline: 1px solid #CCC;
     border-radius: 10px;
-    height:200px;
+    height:210px;
     overflow-y: hidden;
     overflow-x: hidden;
     background-color: white;
@@ -433,7 +461,7 @@ body {
    
 
 .img_grid {
-      background-color: white;  
+  background-color: white;  
   border: none;  
   height: 150px; 
   display: flex; 
@@ -451,11 +479,18 @@ body {
 
   
 .card-title {
+    height: auto;
     border: none;
     border-top: 1px solid grey;
     margin:0px;
     padding: 0px 15px 0px 15px;
 }      
+
+  
+.card-title > p {
+    font-size: 16px;
+    line-height: 19px;
+}    
 
 
 .overlay {
@@ -505,6 +540,12 @@ body {
    
     
 /* ---- Particularité du boutons réinitialiser ----- */
+
+.btn-reset { 
+    background-color: rgba(233, 44, 7, 0.1);
+}
+
+
 .btn-reset:hover {
     color: white !important;  
     background-color: #DD160A;
@@ -513,6 +554,11 @@ body {
               inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
 }
 
+
+
+#btn-add { 
+    background-color: rgba(125, 236, 33, 0.1);
+}
 
 #btn-add:hover {
     color: white !important;  

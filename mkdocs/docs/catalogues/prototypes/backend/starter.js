@@ -25,6 +25,7 @@ for (var i = 0; i < btns.length; i++) {
   });
 }
 
+document.getElementById("catalog-navbar").style.display = "block";
 
 setTimeout(function(){
     all_grid();
@@ -32,7 +33,7 @@ setTimeout(function(){
     var content = document.getElementById("content");
     w3AddClass(loader, "hide")
     w3RemoveClass(content, "hide")
-}, 1500);
+}, 2000);
 
 
 

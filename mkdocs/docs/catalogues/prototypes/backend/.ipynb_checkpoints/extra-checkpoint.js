@@ -81,7 +81,7 @@ function htmlFilterGenerator(content) {
     const data = content.slice(1);
     
     data.forEach(function(row, index) {    
-        html += '<button class="neumorphic-btn" onclick="modifFilters(this,\'' + data[index][0] + '\')"> ' + data[index][1] + '</button>';
+        html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\'' + data[index][0] + '\')"> ' + data[index][1] + '</button>';
     });
 
     grid_filter.innerHTML = html;
@@ -100,7 +100,7 @@ function html_s_FilterGenerator(content) {
     
     data.forEach(function(row, index) {    
         html += '<li>';
-        html += '<button descr="' + data[index][1] + '" class="neumorphic-btn ' + data[index][2] + '" onclick="modifFilters(this,\'' + data[index][0] + '\')"></button>';
+        html += '<button class="neumorphic-btn filtre ' + data[index][0] + '" onclick="modifFilters(this,\''+ data[index][0] +'\');"><i style="font-size:20px;" class="' + data[index][2] + '"></i><div class="DescrFilter">  ' + data[index][1] + '</div></button>'
         html += '</li>';
     });
     
@@ -130,7 +130,7 @@ function htmlTableGenerator(content) {
                         html += '</div>';
                     html += '</div>';
                 html += '</a>';
-                html += '<a href="' + data[index][2] + '" target="_blank"><div class="overlay"><div class="text"><p>' + data[index][1] + '</p></div></div></a>';
+                html += '<a href="' + data[index][2] + '" target="_blank"><div class="overlay"><div class="text"><p style="border-bottom:solid 1px grey;"><b>Auteur.ices : </b>' + data[index][5] + '</p><p>' + data[index][1] + '</p></div></div></a>';
             html += '</div>';
     });
 
@@ -186,7 +186,7 @@ function htmlParamGenerator(content) {
     
     let copyright_zone = document.getElementById('copyright-zone'); 
     
-    html = '<p style="margin:10px;text-align:right;color:#CAC7C7;font-size:14px;"><i>' + data[2][1] + '</i></p';
+    html = '<p style="margin:10px;text-align:center;color:#CAC7C7;font-size:14px;"><img style="filter: grayscale(100%);right-margin:10px;height:40px;" src="https://static.wixstatic.com/media/9c0294_10806d3e86b04622b058669f09f2be9c~mv2.png/v1/fill/w_540,h_146,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/banni%C3%A8reinternet_edited.png"> &emsp; &emsp;<img style="filter: grayscale(100%);height:40px;left-margin:100px;" src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"><br><br>' + data[2][1] + '</p>';
 
     copyright_zone.innerHTML = html;
     
@@ -195,22 +195,22 @@ function htmlParamGenerator(content) {
     
     let Banner = document.getElementById('Banner');
     
-    html = '<h2 style="vertical-align: middle;padding-left:15px;">Bienvenue sur la Forge de Picojoule</h2>';
+    //html = '<h2 style="vertical-align: middle;padding-left:15px;">Bienvenue sur la Forge de Picojoule</h2>';
     
-    Banner.innerHTML = html;
+    //Banner.innerHTML = html;
     
     // -----> Ajouter les boutons de navigation
     
     let btn_zone = document.getElementById('btn-zone'); 
 
     html = '<div><button class="btn neumorphic-btn" onclick="BackBtn();"><i class="fa-regular fa-circle-left"></i>  Retour</button>';
-    
-    html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-filter"></i>  Filtres</button>';
-    
-    html += '<button class="btn neumorphic-btn btn-reset" onclick="all_grid()"><i class="fa-solid fa-xmark"></i>  Réinitialiser</button>';
-    
+
     html += '<button class="btn neumorphic-btn" id="btn-add" onclick="show(\'popup2\')"><i class="fa-solid fa-plus"></i> Ajouter un projet</button>';
     
+    html += '<button class="btn neumorphic-btn btn-reset" onclick="all_grid()"><i class="fa-solid fa-xmark"></i> Réinitialiser</button>';
+    
+    html += '<button class="btn neumorphic-btn" id="FilterBtn" onclick="HideShowFilters(\'filters-zone\');"><i class="fa-solid fa-filter"></i> Filtres</button>';  
+
     html += '<input type="text" id="myInput" onkeyup="SearchBar()" placeholder="Recherche ..." title="Type in a name"></div>';
     
     btn_zone.innerHTML = html;
@@ -379,6 +379,9 @@ function modifFilters(element,c) {
 
 
 
+
+
+
 // -----> Affiche les filtres courant pour une meilleur visualisation
 function listFilters(){
     
@@ -387,7 +390,7 @@ function listFilters(){
     let filters_list = document.getElementById('filters-list');
     
     for (var i = 0, len = filters.length; i < len; i++){   
-        html += '<button class="neumorphic-tag">' + VlookUp(arr_filters, filters[i]) + '</button>';
+        html += '<button class="neumorphic-tag active" onclick="TagFilterClick(this,\''+ filters[i] +'\');"><i style="color: red;" class="fa-solid fa-xmark"></i>  ' + VlookUp(arr_filters, filters[i]) + '</button>';
     };
     
     filters_list.innerHTML = html;
@@ -449,8 +452,36 @@ var hide = function(id) {
 
 
 
+
+// -----> permet de cliquer sur les petits filtres pour les supprimer
+function TagFilterClick(element,c) {
+
+    modifFilters(element,c);
+    
+    c = c + ' filtre';
+
+    x = document.getElementsByClassName(c);
+    for (i = 0; i < x.length; i++) {
+        w3RemoveClass(x[i], "show");
+        w3RemoveClass(x[i], "active");
+    }
+
+}
+
 // ============== Fonction en essai =================
 
+
+
+
+
+function ShowMobileNav() {    
+    if (document.getElementById("catalog-navbar").style.display == "block"){
+        document.getElementById("catalog-navbar").style.display = "none";
+    } else {
+        document.getElementById("catalog-navbar").style.display = "block";
+    
+    }
+}
 
 
 

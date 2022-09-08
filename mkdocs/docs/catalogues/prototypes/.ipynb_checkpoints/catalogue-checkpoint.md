@@ -5,26 +5,6 @@ hide:
 ---
 
 
-
-
-<!-- NE PAS MODIFIER CETTE PAGE -->
-
-
-
-
-
-<html lang="fr">
-    <div id="container-loader">
-        <div id="loader"></div>
-        <h4>Chargement</h4>
-    </div>
-</html>
-
-
-
-
-
-
 <html lang="fr">
 <head>
     <meta charset="utf-8">
@@ -42,16 +22,21 @@ hide:
     <!-- Custom CSS -->
     <link rel="stylesheet" href="../backend/extra.css">
 </head>
-    <body><div id="content" class="hide">
-        <div id="Banner"></div>
+    <body>    
+        <div id="container-loader">
+            <div id="loader"></div>
+            <h4>Chargement</h4>
+        </div>
+        <div id="content" class="hide"> 
         <div id="catalog-navbar">
             <div id="btn-zone"></div>
             <div style="justify-content: center" class="hide neumorphic-card" id="filters-zone">
                 <br><div id="grid-filter"></div>
-                <hr><div id="grid-s-filter"></div>
+                <br><div id="grid-s-filter"></div>
                 <div id="param-zone"></div>
             </div><br>
         </div>
+        <div id="btn-zone-mobile"><button onclick="ShowMobileNav();"><i class="fa-solid fa-bars"></i></button></div>    
         <div style="text-align:left;justify-content: left;" id="filters-list"></div>
         <div id="grid-preview"></div>
         <hr><div id="copyright-zone"></div>
@@ -126,7 +111,7 @@ hide:
   top: 0;
   left: 0;
   bottom: 0;
-      background-color: #D5D5D5;
+  background-color: #D5D5D5;
   right: 0;
   z-index: -1;
 }
@@ -144,7 +129,6 @@ hide:
 }    
      
 #container-loader {
-  display:none;  
   width: 100px;
   height: 425px;
   position: absolute;
