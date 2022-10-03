@@ -4,11 +4,10 @@ theme:
   name: material
   features:
     - navigation.tabs
+    - navigation.tabs.sticky
     - navigation.top
     - navigation.indexes
-    - search.highlight
-    - search.share
-    - search.suggest 
+    - navigation.tracking
   icon: 
     repo: fontawesome/brands/git
   logo: logo.png
@@ -24,7 +23,7 @@ markdown_extensions:
 
 plugins:
   - macros
-  - search
   - mike
   
-
+extra_css:
+  - _css/extra.css
