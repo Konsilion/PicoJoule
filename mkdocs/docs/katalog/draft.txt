@@ -1,0 +1,52 @@
+    
+    
+    <div style="text-align: center; justify-content: center;"  id="grid-show" class="grid-container">
+        
+        <div class="container">
+            <a href="../data/catalogue">
+                <div class="column_catalog">
+                    <div class="img_grid"><img class="img_card" src="../../images/logo-data.png"></div>
+                    <div class="card-title">
+                        <p><b>Base de données - Mesures</b></p>
+                    </div>
+                </div>
+            </a>
+            <a class="overlay" href="../donnees/katalog"><p style="border-bottom:solid 1px grey;"><b>Description : </b></p><p>.</p></a>
+        </div>
+        
+        <div class="container">
+            <a href="../model/catalogue">
+                <div class="column_catalog">
+                    <div class="img_grid"><img class="img_card" src="../../images/logo-model.png"></div>
+                    <div class="card-title">
+                        <p><b>Modèles numériques</b></p>
+                    </div>
+                </div>
+            </a>
+            <a class="overlay" href="../modeles/katalog"><p style="border-bottom:solid 1px grey;"><b>Description : </b></p><p>.</p></a>
+        </div>
+        
+        <div class="container">
+            <a href="../model/catalogue">
+                <div class="column_catalog">
+                    <div class="img_grid"><img class="img_card" src="../../images/logo-labo.png"></div>
+                    <div class="card-title">
+                        <p><b>Prototypes - Laboratoires</b></p>
+                    </div>
+                </div>
+            </a>
+            <a class="overlay" href="../laboratoires/katalog"><p style="border-bottom:solid 1px grey;"><b>Description : </b></p><p>.</p></a>
+        </div>   
+        
+        <div class="container">
+            <a href="../model/catalogue">
+                <div class="column_catalog">
+                    <div class="img_grid"><img class="img_card" src="../../images/logo-fabrication.png"></div>
+                    <div class="card-title">
+                        <p><b>Plans - Fabrication</b></p>
+                    </div>
+                </div>
+            </a>
+            <a class="overlay" href="../fabrication/katalog"><p style="border-bottom:solid 1px grey;"><b>Description : </b></p><p>.</p></a>
+        </div>  
+    </div>
