@@ -44,6 +44,8 @@
       
     
     
+      <link rel="stylesheet" href="_css/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -79,7 +81,9 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="En-tête">
     <a href="." title="Méthaniseur domestique - Documentation et réalisations" class="md-header__button md-logo" aria-label="Méthaniseur domestique - Documentation et réalisations" data-md-component="logo">
       
@@ -108,68 +112,11 @@
     
     
     
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="Search">
-        
-          <a href="javascript:void(0)" class="md-search__icon md-icon" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
-          </a>
-        
-        <button type="reset" class="md-search__icon md-icon" aria-label="Effacer" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-        <div class="md-search__suggest" data-md-component="search-suggest"></div>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
-            Initialisation de la recherche
-          </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/konsilion/picojoule" title="Aller au dépôt" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M216.29 158.39H137C97 147.9 6.51 150.63 6.51 233.18c0 30.09 15 51.23 35 61-25.1 23-37 33.85-37 49.21 0 11 4.47 21.14 17.89 26.81C8.13 383.61 0 393.35 0 411.65c0 32.11 28.05 50.82 101.63 50.82 70.75 0 111.79-26.42 111.79-73.18 0-58.66-45.16-56.5-151.63-63l13.43-21.55c27.27 7.58 118.7 10 118.7-67.89 0-18.7-7.73-31.71-15-41.07l37.41-2.84zm-63.42 241.9c0 32.06-104.89 32.1-104.89 2.43 0-8.14 5.27-15 10.57-21.54 77.71 5.3 94.32 3.37 94.32 19.11zm-50.81-134.58c-52.8 0-50.46-71.16 1.2-71.16 49.54 0 50.82 71.16-1.2 71.16zm133.3 100.51v-32.1c26.75-3.66 27.24-2 27.24-11V203.61c0-8.5-2.05-7.38-27.24-16.26l4.47-32.92H324v168.71c0 6.51.4 7.32 6.51 8.14l20.73 2.84v32.1zm52.45-244.31c-23.17 0-36.59-13.43-36.59-36.61s13.42-35.77 36.59-35.77c23.58 0 37 12.62 37 35.77s-13.42 36.61-37 36.61zM512 350.46c-17.49 8.53-43.1 16.26-66.28 16.26-48.38 0-66.67-19.5-66.67-65.46V194.75c0-5.42 1.05-4.06-31.71-4.06V154.5c35.78-4.07 50-22 54.47-66.27h38.63c0 65.83-1.34 61.81 3.26 61.81H501v40.65h-60.56v97.15c0 6.92-4.92 51.41 60.57 26.84z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    picojoule/
-  </div>
-</a>
-      </div>
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
@@ -193,15 +140,23 @@
   
 
 
+  <li class="md-tabs__item">
+    <a href="katalog/AllKatalog/" class="md-tabs__link">
+      Ressources de développement
+    </a>
+  </li>
+
+      
+        
   
   
-  
-    <li class="md-tabs__item">
-      <a href="techniques/introduction/" class="md-tabs__link">
-        Techniques
-      </a>
-    </li>
-  
+
+
+  <li class="md-tabs__item">
+    <a href="katalog/documentation/katalog/" class="md-tabs__link">
+      Documentations
+    </a>
+  </li>
 
       
         
@@ -213,39 +168,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="prototypes/introduction/" class="md-tabs__link">
-        Prototypes
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="analyses/introduction/" class="md-tabs__link">
-        Analyses
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-
-
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="informations/premiers_pas/" class="md-tabs__link">
+      <a href="informations/pad/" class="md-tabs__link">
         Communauté
       </a>
     </li>
@@ -255,7 +178,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -282,18 +211,6 @@
     </a>
     Méthaniseur domestique - Documentation et réalisations
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/konsilion/picojoule" title="Aller au dépôt" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.1.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M216.29 158.39H137C97 147.9 6.51 150.63 6.51 233.18c0 30.09 15 51.23 35 61-25.1 23-37 33.85-37 49.21 0 11 4.47 21.14 17.89 26.81C8.13 383.61 0 393.35 0 411.65c0 32.11 28.05 50.82 101.63 50.82 70.75 0 111.79-26.42 111.79-73.18 0-58.66-45.16-56.5-151.63-63l13.43-21.55c27.27 7.58 118.7 10 118.7-67.89 0-18.7-7.73-31.71-15-41.07l37.41-2.84zm-63.42 241.9c0 32.06-104.89 32.1-104.89 2.43 0-8.14 5.27-15 10.57-21.54 77.71 5.3 94.32 3.37 94.32 19.11zm-50.81-134.58c-52.8 0-50.46-71.16 1.2-71.16 49.54 0 50.82 71.16-1.2 71.16zm133.3 100.51v-32.1c26.75-3.66 27.24-2 27.24-11V203.61c0-8.5-2.05-7.38-27.24-16.26l4.47-32.92H324v168.71c0 6.51.4 7.32 6.51 8.14l20.73 2.84v32.1zm52.45-244.31c-23.17 0-36.59-13.43-36.59-36.61s13.42-35.77 36.59-35.77c23.58 0 37 12.62 37 35.77s-13.42 36.61-37 36.61zM512 350.46c-17.49 8.53-43.1 16.26-66.28 16.26-48.38 0-66.67-19.5-66.67-65.46V194.75c0-5.42 1.05-4.06-31.71-4.06V154.5c35.78-4.07 50-22 54.47-66.27h38.63c0 65.83-1.34 61.81 3.26 61.81H501v40.65h-60.56v97.15c0 6.92-4.92 51.41 60.57 26.84z"/></svg>
-  </div>
-  <div class="md-source__repository">
-    picojoule/
-  </div>
-</a>
-    </div>
   
   <ul class="md-nav__list" data-md-scrollfix>
     
@@ -327,180 +244,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          Techniques
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Techniques" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          Techniques
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="techniques/introduction/" class="md-nav__link">
-        Introduction
+      <a href="katalog/AllKatalog/" class="md-nav__link">
+        Ressources de développement
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/production/" class="md-nav__link">
-        Production de gaz
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_2_3">
-          Traitements & stockage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Traitements & stockage" data-md-level="2">
-        <label class="md-nav__title" for="__nav_2_3">
-          <span class="md-nav__icon md-icon"></span>
-          Traitements & stockage
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/epuration/" class="md-nav__link">
-        Epuration
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/compression/" class="md-nav__link">
-        Compression
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/stockages/" class="md-nav__link">
-        Stockages
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/utilisation/" class="md-nav__link">
-        Utilisation
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="techniques/epandage/" class="md-nav__link">
-        Retour au sol
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -512,63 +259,10 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
-      
-      
-      
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Prototypes
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Prototypes" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Prototypes
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
-      <a href="prototypes/introduction/" class="md-nav__link">
-        Introduction
+      <a href="katalog/documentation/katalog/" class="md-nav__link">
+        Documentations
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="prototypes/liste_proto/" class="md-nav__link">
-        Liste des prototypes
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -595,133 +289,15 @@
         
           
         
-          
-        
-          
-        
       
       
         <label class="md-nav__link" for="__nav_4">
-          Analyses
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Analyses" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Analyses
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="analyses/introduction/" class="md-nav__link">
-        Introduction
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="analyses/acv/" class="md-nav__link">
-        Analyses de Cycle de Vie
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="analyses/tech_eco/" class="md-nav__link">
-        Technico-économique
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="analyses/acceptation_sociale/" class="md-nav__link">
-        Acceptation sociale
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="analyses/reglementation/" class="md-nav__link">
-        Réglementaire
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-        
-          
-        
-          
-        
-          
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5">
           Communauté
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Communauté" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
+        <label class="md-nav__title" for="__nav_4">
           <span class="md-nav__icon md-icon"></span>
           Communauté
         </label>
@@ -733,8 +309,8 @@
   
   
     <li class="md-nav__item">
-      <a href="informations/premiers_pas/" class="md-nav__link">
-        Documentation collaborative ?
+      <a href="informations/pad/" class="md-nav__link">
+        Compte rendu - Prise de notes
       </a>
     </li>
   
@@ -747,8 +323,8 @@
   
   
     <li class="md-nav__item">
-      <a href="tablecsv/table2/" class="md-nav__link">
-        Tablecsv
+      <a href="informations/chat/" class="md-nav__link">
+        Chat de discussion
       </a>
     </li>
   
@@ -762,59 +338,8 @@
   
     <li class="md-nav__item">
       <a href="informations/visio/" class="md-nav__link">
-        Visioconférences publiques
+        Salons de visios
       </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_4" type="checkbox" id="__nav_5_4" >
-      
-      
-      
-        
-          
-        
-      
-      
-        <label class="md-nav__link" for="__nav_5_4">
-          Contacts
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Contacts" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_4">
-          <span class="md-nav__icon md-icon"></span>
-          Contacts
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="informations/contacts/" class="md-nav__link">
-        Coordonnées
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
     </li>
   
 
@@ -856,21 +381,112 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/konsilion/picojoule/blob/master/mkdocs/docs/index.md" title="Editer cette page" class="md-content__button md-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
-  </a>
+
+
+<p><head>
+<link rel="stylesheet" href="./_css/accueil.css" />
+</head></p>
+<div style="text-align:center;">
+    <h1 style="color:#3B5F7F; font-size: 60px; margin-bottom:25px; display: none;"><b>PicoJoule</b> - Énergies renouvelables pour <u>toutes et tous</u>.</h1>
+    <img id="Banniere" src="./images/banniere.png"><br><br>
+    <p style="font-weight: 500; font-family: 'ubuntu', 'Helvetica Neue', 'Helvetica', 'Arial'; margin: 0px 50px;  font-size: 2.0em; color: grey;">Accédez et participez au <b>développement de la science ouverte</b>.</p>
+    <br>
+</div>
+
+<div style="border-radius:15px; text-align:center; background-color: #F5F5F5; padding: 25px; box-shadow: 2px 5px 8px rgba(37, 98, 136, 0.2) !important;">
+    <br>
+    <a style="margin-bottom:15px;" class="md-button md-button--primary" href="https://www.helloasso.com/associations/picojoule/adhesions/adhesion-picojoule-2022" target="_blank">Adhérer à Picojoule</a>
+    <a style="margin-bottom:15px;" class="md-button" href="./katalog/AllKatalog">Bibliothèques de ressources</a>
+    <a class="md-button" href="./informations/premiers_pas">Prise en main</a>
+    <br>
+</div>
+
+<div id="grid-preview">
+
+
+    <h2 id="recherche-collaborative">PicoJoule, <b>Kesako ?</b></h2><hr style="color:white !important; width:7%; border-bottom: 10px solid var(--md-primary-fg-color);"> 
+    <p>PicoJoule désigne une unité de mesure d’énergie dans le domaine de la physique. <br><br>Depuis 2012, c’est aussi le nom d’une association qui fait la promotion des énergies renouvelables avec de petites installations de méthanisation. Suite à ses expériences à Artilect, le Fab-Lab de Toulouse, Picojoule a intégré la Maison de l’Économie Sociale et Solidaire (MES) de Ramonville en 2016.Elle rejoint ainsi un réseau engagé dans la mise en œuvre de solutions inclusives et innovantes pour l’environnement. <br><br>L’association dispose d’un bureau partagé et d'un atelier, où une partie des prototypes est réalisée. <br>Par sa gestion collégiale, Picojoule est pleinement en accord avec les valeurs de l’ESS, avec une gouvernance horizontale.</p><hr>
+</div>
+
+<div id="grid-preview">
+    <h2 id="recherche-collaborative">Pour une <b>Recherche & Développement</b> libre et collaborative</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid var(--md-primary-fg-color);"> 
+    Voici <u>quatres grands principes</u> nécessaires à la réalisation de projets collaboratifs. <br><br>
+    <ul>
+        <li><b>Open community</b> : La communauté est du fait de la notion de collaboration, un pilier centrale. Incontournable, elle apporte soutient et intéligence collective, que nous pensons favorite face à la course à l'Inteligence Artificielle.</li>
+        <li><b>Open data</b> : Les donnnées en libre accès sont essentielless pour alimenter les modèlisations, analyser leur pertinence et valider les hypothèses.</li>
+        <li><b>Open model</b> : Les modèles numériques sont développés afin d'anticiper une technique, un comportement et ses effets dans le "vrai monde". Ainsi déployés, les modèles permettent de corriger les écarts en comparant avec les mesures et résultats de prototypes.</li>
+        <li><b>Open doc</b> : La documentation permet de traverser les âges et de pérenniser un projet. Utile à la médiation et pouvant être utilisée pour la formation, une documentation de qualité est essentielle pour qu'un projet soit constructif et transmissible.</li>
+    </ul><br>
+    <div style="text-align:center; margin-bottom:0px; padding-bottom:0px;">
+        <button style="border-radius:10px; border: 1px solid #DDD; padding:25px;" onclick=""> OPEN COMMUNITY</button>
+        <button style="border-radius:10px; border: 1px solid #DDD; padding:25px;" onclick=""> OPEN DATA</button>
+        <button style="border-radius:10px; border: 1px solid #DDD; padding:25px;" onclick=""> OPEN MODEL</button>
+        <button style="border-radius:10px; border: 1px solid #DDD; padding:25px;" onclick=""> OPEN DOC</button>
+    </div>
+</div>
+
+<p><br></p>
+<div id="grid-preview" style="background-color:#F5F5F5; border-radius:15px;box-shadow: 2px 5px 8px rgba(37, 98, 136, 0.2) !important;">
+    <h2>Pour une <b>médiation et une diffusion</b> simplifiées et accessibles de nos savoirs</h2><hr style="color:white !important; width:7%; border-bottom: 10px solid var(--md-primary-fg-color);"> 
+    Afin de permettre à tout à chacun d'appréhender les concepts physiques, les raisonnements et les conclusions scientifiques apportés, il est nécessaire de présenter simplement nos travaux. Ainsi informée, la communauté est à même d'échanger autour des choix technologiques pour notre société.
+    <br><br>
+    <b>Plateforme de Recherche & Développement</b> de Konsilion : Konsilion plateforme R&D, repose sur le fonctionnement simultané de la production de savoirs avec <u>Konnect</u> et de leur diffusion avec <u>Katalog</u>.<br>
+    <br><br>
+    <div style="text-align: center;"><a class="md-button" href="https://konsilion.fr/wp/recherche-et-developpement/" target="_blank">En savoir plus sur la R&D collaborative</a></div>
+    <br>
+</div>
+
+<h2 style="text-align: center;">Des outils utiles à la collaboration scientifique</h2>
+<p><br>
+<img id="img-logo" src="./images/techno_logo_banner.png"><br></p>
+<div style="text-align: center;"><a class="md-button" href="https://konnect.konsilion.fr/" target="_blank">Retrouvez-les dans Konnect</a><div>
+
+<br><hr>
+
+<p style="margin:10px;text-align:center;color:#CAC7C7;font-size:14px;"><img style="filter: grayscale(100%);height:40px;left-margin:100px;" src="https://konsilion.fr/wp/wp-content/uploads/2022/04/Logo_Konsilion_V2-1024x325.png"><br><br>Licence Creative Commons CC-BY-NC - Développé par Konsilion ingénieries</p>
 
 
 
-<h1 id="bienvenue-sur-la-documentation-des-realisations-de-picojoule"><strong>Bienvenue sur la documentation des réalisations de PicoJoule</strong></h1>
-<p>PicoJoule est une association de loi 1901 qui fait la promotion des <strong>énergies renouvelables</strong> avec de <strong>petites installations de méthanisation</strong>.</p>
-<p>Par cette documentation, informez-vous et/ou participez à sa rédaction. Le but étant de promouvoir une ingénierie libre et populaire.</p>
-<hr />
-<p><strong>Pas très familié.es avec ces notions et outils de coopération ?</strong> </p>
-<p><a href="./informations/premiers_pas/" title="home-link" class="md-button">On vous dit tout !</a><br></p>
-<hr />
-<p><img src="https://static.wixstatic.com/media/9c0294_10806d3e86b04622b058669f09f2be9c~mv2.png/v1/fill/w_836,h_227,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/banni%C3%A8reinternet_edited.png" width="15%" style="float: right;"></p>
-<p><br><br></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>   
+.md-content__button {
+display: none;
+} 
+
+#img-logo { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+}
+
+@media only screen and (max-width: 1200px) {
+    #img-logo { 
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%; 
+    }
+}    
+
+
+
+</style>
 
 
 
@@ -899,13 +515,13 @@
       
       
         
-        <a href="techniques/introduction/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Introduction" rel="next">
+        <a href="katalog/AllKatalog/" class="md-footer__link md-footer__link--next" aria-label="Suivant: Ressources de développement" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Suivant
               </span>
-              Introduction
+              Ressources de développement
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -920,7 +536,7 @@
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Proposé par Konsilion ingénieries basé sur MkDocs - Ce document est régi par les termes de la licence juridique Creative Commons CC-BY-SA 4.0
+      Association Picojoule - Creative Commons CC-BY-SA 4.0
     </div>
   
   
@@ -945,7 +561,7 @@
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.top", "navigation.indexes", "search.highlight", "search.share", "search.suggest"], "search": "assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "version": {"javascript_dir": "js", "provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.top", "navigation.indexes", "navigation.tracking"], "search": "assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.config.lang": "fr", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Rechercher", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version.title": "S\u00e9lectionner la version"}, "version": {"javascript_dir": "js", "provider": "mike"}}</script>
     
     
       <script src="assets/javascripts/bundle.9c69f0bc.min.js"></script>
