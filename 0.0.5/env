@@ -1,0 +1,48 @@
+# SITE INFORMATIONS
+
+site_name: Méthaniseur domestique - Documentation et réalisations
+site_author: Nicolas Brémond
+site_description: >-
+  (Description du site)
+
+# LANGUE ET COULEUR
+
+theme:
+  language: fr
+  palette:
+    scheme: default
+    primary: black
+    accent: green
+
+
+# TOUTE VOTRE DOCUMENTATION
+
+nav:
+  - Accueil: index.md
+  
+  - Ressources de développement : katalog/AllKatalog.md
+
+  - Documentations : katalog/documentation/katalog.md
+      
+  - Communauté :
+      - Compte rendu - Prise de notes: informations/pad.md
+      - Chat de discussion: informations/chat.md
+      - Salons de visios: informations/visio.md
+      
+# MENTIONS LEGALES
+
+copyright: Association Picojoule - Creative Commons CC-BY-SA 4.0
+
+
+# LIENS EXTERNES
+
+extra:
+  generator: false
+  social :
+    - icon: fontawesome/brands/linkedin
+      link: https://www.linkedin.com/company/konsilion/
+      name: Retrouvez-nous sur Linkedin
+  version:
+      provider: mike
+      javascript_dir: js
+      

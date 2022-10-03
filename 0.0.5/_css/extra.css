@@ -1,0 +1,326 @@
+:root > * {
+	--color-back-form: rgba(245, 245, 245, 0.9);
+	--color-button: #1FAA1F;
+    --md-primary-fg-color: #70AA1A !important;
+    --md-primary-fg-color-light: rgba(19,96,149,0.2) !important;
+    --md-primary-fg-color--dark: #505050;
+}
+
+#######################################
+
+.md-content__button {
+display: none;
+}
+
+/* ------ NAVIGATION ------ */
+
+.md-header {
+    background-color: rgba(1,1,1,0);
+    background-image: linear-gradient(to right, #70AA1A , #505050);
+}
+
+
+.md-tabs {
+    background-color: grey !important;
+    padding: 0px;
+}
+
+.md-tabs__item:hover, .md-tabs__item:hover > a  {
+    background-color: #DDD !important;
+    color: black !important;
+}
+
+.md-tabs__link {
+    color: #EEE;
+    
+}
+
+.md-tabs__inner.md-grid, .md-header__inner.md-grid {
+    margin:0px !important;
+
+}
+
+.md-header__source {
+    right:0px;
+}
+
+
+.md-footer {
+    display:none;
+}
+
+
+a.md-content__button.md-icon {
+    display: none !important;
+}
+
+
+
+/* ------ CLASS DIV ------ */
+
+
+.div-container {
+    padding: 25px 200px;
+}
+
+@media only screen and (max-width: 1219px) {
+    .div-container {
+        padding: 25px 25px;
+    }
+}
+
+
+
+
+
+/* ------ FORMULAIRE ------ */
+
+form {
+	background: var(--color-back-form);
+    padding: 5px 25px 5px 25px;
+	border-radius: 8px;
+}
+
+
+.form-group {
+	margin: 0 auto 1.25rem auto;
+	padding: 0.25rem;
+}
+
+.form-control {
+	display: block;
+	width: 100%;
+	height: 2.375rem;
+	padding: 0.375rem 0.75rem;
+	color: #495057;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: 0.25rem;
+	transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio, .input-checkbox {
+	display: inline-block;
+	margin-right: 0.625rem;
+	min-height: 1.25rem;
+	min-width: 1.25rem;
+}
+
+.input-textarea {
+	min-height: 120px;
+	width: 100%;
+	padding: 0.625rem;
+	resize: vertical;
+}
+
+.submit-button {
+	display: block;
+	width: 100%;
+	padding: 0.75rem;
+	background: var(--color-button);
+	color: white;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+
+
+:root {
+  --md-admonition-icon--ksln-info: url(../../images/circle-info-solid.svg)
+}
+
+.md-typeset .admonition.ksln-info,
+.md-typeset details.ksln-info {
+  border-color: white;
+}
+.md-typeset .ksln-info > .admonition-title,
+.md-typeset .ksln-info > summary {
+  background-color: var(--md-primary-fg-color-light);
+}
+.md-typeset .ksln-info > .admonition-title::before,
+.md-typeset .ksln-info > summary::before {
+  background-color: grey;
+  -webkit-mask-image: var(--md-admonition-icon--ksln-info);
+          mask-image: var(--md-admonition-icon--ksln-info);
+}
+
+
+
+.InputAdd {
+  background-color: white;
+  width: 45%;
+  font-size: 16px;
+  padding: 12px 12px 12px 12px;
+  border: 1px solid #ddd;
+  margin: 0px 12px 12px 0px;
+  border-radius: 15px;
+}
+
+.InputAdd::placeholder {
+    color: #CCC;
+} 
+
+
+
+@media only screen and (max-width: 1219px) {
+    .InputAdd {
+      width: 100%;
+    }
+}  
+
+
+
+/*----------------------------
+    NEUMORPHISM ELEMENTS 
+-----------------------------*/
+
+.neumorphic-btn {
+  border: 1px solid #DEDEDE; 
+  font-size: 18px; 
+  cursor: pointer;  
+  margin: 0px 25px 10px 0px;
+  text-align:center;  
+  padding: 10px 40px;
+  border-radius: 5px;
+  color: grey;
+  background-color: #FFFFFF;
+  box-shadow: var(--shadow-nump);
+  transition: box-shadow 0.8s ease;
+}
+
+
+
+.neumorphic-btn:hover {
+  box-shadow: inset 7px 7px 8px rgba(55, 84, 170, .15),
+              inset -7px -7px 10px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
+}
+    
+
+.neumorphic-btn.active {
+    color: #06c900;
+    box-shadow: 0px 0px 0px rgba(55, 84, 170, .25),
+              0px 0px 0px rgba(255, 255, 255, 1),
+              inset -7px -7px 10px rgba(255, 255, 255, 0.5),
+              inset 7px 7px 10px rgba(70, 70, 70, 0.12);
+}
+
+
+.neumorphic-card {
+  display: block;    
+  padding: 40px;  
+  border-radius: 8px;
+}
+
+        
+.neumorphic-tag {
+  font-size: 17px;  
+  margin: 0px 20px 20px 0px;
+  text-align:center;  
+  padding: 6px 20px;
+  border-radius: 5px;
+  color: #6D7587;
+  background-color: white;
+  box-shadow: 3px 3px 4px rgba(55, 84, 170, .2),
+              -3px -3px 5px rgba(252, 252, 252, 1),
+              0px 0px 4px rgba(255, 255, 255, 0) !important;
+}
+
+.neumorphic-tag:hover {
+  font-size: 17px;  
+  margin: 0px 20px 20px 0px;
+  text-align:center;  
+  padding: 6px 20px;
+  border-radius: 5px;
+  color: #6D7587;
+  background-color: var(--back-color);
+  box-shadow: inset 3px 3px 4px rgba(55, 84, 170, .15),
+              inset -3px -3px 5px rgba(255, 255, 255, 1),
+              inset 0px 0px 4px rgba(255, 255, 255, 0) !important;
+}
+
+
+
+
+/*----------------------------
+    AUTRES ELEMENTS 
+-----------------------------*/  
+
+    
+/* ---- Status de base les FilerDiv sont caché ----- */
+.filterDiv {
+  display: none;
+}
+
+/* ---- Les FilerDiv sont montrés si show est ajouté à la classe ----- */
+.show {
+  display: block;
+}
+
+/* ---- Permet de cacher certains éléments ----- */
+.hide {
+  display: none;
+}
+   
+    
+/* ---- Particularité du boutons réinitialiser ----- */
+
+.btn-reset:hover {
+    color: white !important;  
+    background-color: #DD160A;
+    box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
+              inset -7px -7px 10px rgba(255, 255, 255, 0.2),
+              inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+
+
+#btn-add { 
+    background-color: rgba(125, 236, 33, 0.1);
+}
+
+#btn-add:hover {
+    color: white !important;  
+    background-color: green;
+    box-shadow: inset 7px 7px 8px rgba(55, 84, 170, 0.2),
+              inset -7px -7px 10px rgba(255, 255, 255, 0.2),
+              inset 0px 0px 4px rgba(255, 255, 255, 0.2) !important;
+}
+
+
+
+
+#param-zone {
+    box-shadow: 0px 25px 25px -32px rgba(30, 30, 30, 0);
+    transition: box-shadow 0.5s linear;
+}
+
+#param-zone:hover {
+    box-shadow: 0px -25px 22px -32px rgba(30, 30, 30, 0.7);
+}
+
+
+
+.md-copyright {
+    max-width: 25px !important;
+    text-overflow: ellipsis !important;
+    overflow: hidden !important;
+    white-space: nowrap !important;
+}
+
+
+.ellipsis {
+    max-width: 100px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
